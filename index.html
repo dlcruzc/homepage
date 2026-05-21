@@ -102,13 +102,13 @@
     #navbar { transition: background .3s, border-color .3s; }
     #navbar.scrolled { background: rgba(10,10,10,.94); border-bottom-color: #1e1e1e; backdrop-filter: blur(16px); }
 
-    /* ── SCROLL REVEAL — ultra-simple & bulletproof ── */
-    .reveal {
+    /* ── SCROLL REVEAL — content visible by default; JS enhances ── */
+    .js-on .reveal {
       opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .55s ease, transform .55s ease;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
     }
-    .reveal.in { opacity: 1; transform: translateY(0); }
+    .js-on .reveal.in { opacity: 1; transform: translateY(0); }
 
     /* ── Gradient text ── */
     .grad {
@@ -216,8 +216,8 @@
 <!-- ════════ NAVBAR ════════ -->
 <header id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-transparent">
   <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
-    <a href="#hero" class="shrink-0 text-xs font-black tracking-widest uppercase hover:text-accent transition-colors">
-      Daniel <span class="text-accent">Leonardo Cruz Castro</span>
+    <a href="#hero" class="shrink-0 hover:text-accent transition-colors" style="font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;">
+      Daniel L. <span class="text-accent">Cruz Castro</span>
     </a>
     <ul class="hidden md:flex items-center gap-7 text-xs font-semibold tracking-widest uppercase text-muted">
       <li><a href="#about"      class="hover:text-text transition-colors">About</a></li>
@@ -258,14 +258,14 @@
     <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}</style>
 
     <!-- Full name label -->
-    <p class="text-xs font-bold tracking-[.2em] uppercase text-muted mb-5">
+    <p class="text-xs font-bold tracking-[.18em] uppercase text-muted mb-5">
       Daniel Leonardo Cruz Castro
     </p>
 
-    <!-- Headline -->
-    <h1 class="font-black leading-[1] tracking-tight mb-6 text-[clamp(2.6rem,7vw,5.5rem)]">
-      I make things<br>happen<span class="text-accent">.</span><br>
-      <span class="grad">Data. Strategy.<br>Real Results.</span>
+    <!-- Headline — clamp keeps size safe on every screen -->
+    <h1 class="font-black tracking-tight mb-6" style="font-size:clamp(2.4rem,6.5vw,5rem);line-height:1.08;">
+      I make things happen<span class="text-accent">.</span><br>
+      <span class="grad">Data. Strategy. Real Results.</span>
     </h1>
 
     <p class="text-base md:text-lg text-muted max-w-2xl leading-relaxed mb-3">
@@ -849,5 +849,4 @@
 
 <!-- FOOTER -->
 <footer class="border-t border-border py-8">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
-    <span>© 2026 Daniel Leonardo Cruz Ca
+  <div class="max-w-7xl m
