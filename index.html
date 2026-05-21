@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daniel Leonardo Cruz Castro — Data Governance & Analytics Leader</title>
-  <meta name="description" content="Executive with 15+ years leading data, analytics, AI and digital transformation. Data Governance & Analytics COE Manager at Avianca. I make things happen." />
-  <meta name="keywords" content="Data Governance, Analytics, Digital Transformation, Data Strategy, Avianca, Colombia, CDO, DAMA, Databricks" />
-  <meta name="author" content="Daniel Leonardo Cruz Castro" />
-  <meta property="og:title" content="Daniel Leonardo Cruz Castro — Data & Analytics Leader" />
-  <meta property="og:description" content="I make things happen: turning strategy, data, and people into real business results." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://danielleonardocruz.com" />
+  <meta name="description" content="Executive with 15+ years leading data governance, analytics transformation, and digital strategy. Data Governance & Analytics COE Manager at Avianca. I make things happen."/>
+  <meta name="keywords" content="Daniel Leonardo Cruz Castro, Data Governance, Analytics, Digital Transformation, Data Strategy, Avianca, Colombia, CDO, DAMA, Databricks, MLOps"/>
+  <meta name="author" content="Daniel Leonardo Cruz Castro"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://danielleonardocruz.com/"/>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://danielleonardocruz.com/"/>
+  <meta property="og:title" content="Daniel Leonardo Cruz Castro — Data Governance & Analytics Leader"/>
+  <meta property="og:description" content="I make things happen: turning strategy, data, and people into real business results. 15+ years in financial services and aviation."/>
+  <meta property="og:site_name" content="Daniel Leonardo Cruz Castro"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@dlcruzc"/>
+  <meta name="twitter:title" content="Daniel Leonardo Cruz Castro — Data & Analytics Leader"/>
+  <meta name="twitter:description" content="Data Governance & Analytics COE Manager at Avianca. 15+ years turning data into business strategy at scale."/>
+
+  <!-- JSON-LD Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Leonardo Cruz Castro",
+    "alternateName": "Daniel Cruz Castro",
+    "url": "https://danielleonardocruz.com",
+    "email": "lecruk@gmail.com",
+    "telephone": "+573017564078",
+    "jobTitle": "Data Governance & Analytics COE Manager",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Avianca",
+      "url": "https://www.avianca.com"
+    },
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Universidade de São Paulo"},
+      {"@type": "CollegeOrUniversity", "name": "Universitat de Barcelona"},
+      {"@type": "CollegeOrUniversity", "name": "Universidad Nacional de Colombia"}
+    ],
+    "knowsAbout": ["Data Governance", "Analytics", "Digital Transformation", "AI Strategy", "DAMA Framework", "Databricks", "MLOps", "FinTech"],
+    "address": {"@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO"},
+    "sameAs": [
+      "https://www.linkedin.com/in/dlcruzc/",
+      "https://github.com/dlcruzc",
+      "https://x.com/dlcruzc",
+      "https://www.academia.edu/44740909"
+    ],
+    "description": "Executive with 15+ years leading data, analytics, AI and digital transformation across financial services and aviation."
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,24 +69,9 @@
         extend: {
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: {
-            bg:      '#0a0a0a',
-            surface: '#111111',
-            card:    '#141414',
-            border:  '#1e1e1e',
-            muted:   '#6b6b6b',
-            subtle:  '#9a9a9a',
-            text:    '#e8e8e8',
-            accent:  '#c8f542',
-            accentB: '#8b5cf6',
-          },
-          animation: {
-            'float':   'float 7s ease-in-out infinite',
-            'scan':    'scan 4s linear infinite',
-            'pulse-slow': 'pulse 3s ease-in-out infinite',
-          },
-          keyframes: {
-            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
-            scan:  { '0%': { top: '0%' }, '100%': { top: '100%' } },
+            bg: '#0a0a0a', surface: '#111111', card: '#141414',
+            border: '#1e1e1e', muted: '#6b6b6b', subtle: '#9a9a9a',
+            text: '#e8e8e8', accent: '#c8f542', accentB: '#8b5cf6'
           }
         }
       }
@@ -47,587 +79,588 @@
   </script>
 
   <style>
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; }
     html { background: #0a0a0a; color: #e8e8e8; }
     body { font-family: 'Inter', system-ui, sans-serif; background: #0a0a0a; overflow-x: hidden; }
 
-    /* ── Cursor ring (native cursor stays visible) ── */
-    #cursor      { display:none; } /* dot hidden — ring only */
-    #cursor-ring { pointer-events:none; position:fixed; width:40px; height:40px; border:1.5px solid rgba(200,245,66,.45); border-radius:50%; transform:translate(-50%,-50%); transition:left .12s ease,top .12s ease,width .2s,height .2s,border-color .2s; z-index:9998; }
-    a:hover ~ #cursor-ring, button:hover ~ #cursor-ring { width:56px; height:56px; border-color:rgba(200,245,66,.7); }
+    /* ── Grain overlay ── */
+    body::after {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: .02;
+    }
 
-    /* ── Grain ── */
-    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); opacity:.022; pointer-events:none; z-index:0; }
-
-    /* ── Grid bg ── */
-    .grid-bg { background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px); background-size:60px 60px; }
+    /* ── Grid ── */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
 
     /* ── Navbar ── */
-    #navbar { transition:background .3s,border-color .3s; }
-    #navbar.scrolled { background:rgba(10,10,10,.92); border-bottom-color:#1e1e1e; backdrop-filter:blur(14px); }
+    #navbar { transition: background .3s, border-color .3s; }
+    #navbar.scrolled { background: rgba(10,10,10,.94); border-bottom-color: #1e1e1e; backdrop-filter: blur(16px); }
 
-    /* ── Scroll reveal ── */
-    .reveal { opacity:0; transform:translateY(30px); transition:opacity .65s ease,transform .65s ease; }
-    .reveal.visible { opacity:1; transform:translateY(0); }
+    /* ── SCROLL REVEAL — ultra-simple & bulletproof ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
 
     /* ── Gradient text ── */
-    .grad { background:linear-gradient(135deg,#c8f542 0%,#8b5cf6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-
-    /* ── Marquee ── */
-    .marquee-wrap { overflow:hidden; white-space:nowrap; }
-    .marquee-inner { display:inline-flex; gap:2.5rem; animation:marquee 30s linear infinite; }
-    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .grad {
+      background: linear-gradient(130deg, #c8f542 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
     /* ── Blobs ── */
-    .blob { filter:blur(90px); border-radius:50%; position:absolute; pointer-events:none; }
+    .blob { filter: blur(80px); border-radius: 50%; position: absolute; pointer-events: none; }
 
-    /* ── Cards ── */
-    .project-card { transition:transform .3s,border-color .3s,box-shadow .3s; }
-    .project-card:hover { transform:translateY(-6px); border-color:rgba(200,245,66,.28) !important; box-shadow:0 24px 60px rgba(200,245,66,.06); }
-    .project-card:hover .arrow-icon { transform:translate(4px,-4px); }
-    .arrow-icon { transition:transform .25s; }
-
-    /* ── Tag ── */
-    .tag { display:inline-block; padding:.22rem .6rem; border-radius:999px; font-size:.68rem; font-weight:500; letter-spacing:.04em; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); color:#9a9a9a; transition:background .2s,color .2s,border-color .2s; }
-    .tag:hover { background:rgba(200,245,66,.1); color:#c8f542; border-color:rgba(200,245,66,.2); }
-    .tag-accent { background:rgba(200,245,66,.1); color:#c8f542; border-color:rgba(200,245,66,.2); }
-
-    /* ── Timeline ── */
-    .tl-line { background:linear-gradient(to bottom,#c8f542,#8b5cf6 60%,transparent); }
+    /* ── Marquee ── */
+    .mq-wrap { overflow: hidden; white-space: nowrap; }
+    .mq-inner { display: inline-flex; gap: 2.5rem; animation: marquee 32s linear infinite; }
+    @keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
 
     /* ── Buttons ── */
-    .btn-p { background:#c8f542; color:#0a0a0a; font-weight:700; letter-spacing:.02em; transition:transform .2s,box-shadow .2s; }
-    .btn-p:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(200,245,66,.3); }
-    .btn-o { border:1px solid #242424; color:#e8e8e8; font-weight:500; transition:border-color .2s,color .2s,transform .2s; }
-    .btn-o:hover { border-color:rgba(200,245,66,.4); color:#c8f542; transform:translateY(-2px); }
+    .btn-p {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #c8f542; color: #0a0a0a; font-weight: 700;
+      padding: .85rem 1.75rem; border-radius: 999px; font-size: .875rem;
+      transition: transform .2s, box-shadow .2s; white-space: nowrap;
+    }
+    .btn-p:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,245,66,.3); }
+    .btn-o {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 1px solid #282828; color: #e8e8e8; font-weight: 500;
+      padding: .85rem 1.75rem; border-radius: 999px; font-size: .875rem;
+      transition: border-color .2s, color .2s, transform .2s; white-space: nowrap;
+    }
+    .btn-o:hover { border-color: rgba(200,245,66,.4); color: #c8f542; transform: translateY(-2px); }
 
-    /* ── Photo ── */
-    .photo-wrap { position:relative; }
-    .photo-wrap::before { content:''; position:absolute; inset:-2px; border-radius:1.25rem; background:linear-gradient(135deg,#c8f542,#8b5cf6); z-index:-1; opacity:.6; }
-    .photo-img { width:100%; height:100%; object-fit:cover; border-radius:1.1rem; display:block; }
-    .photo-placeholder { width:100%; min-height:400px; height:420px; border-radius:1.1rem; background:linear-gradient(160deg,#1e1e1e 0%,#141414 60%,#111 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.2rem; border:1px solid #242424; }
-    .photo-initials { font-size:5rem; font-weight:900; letter-spacing:-.05em; background:linear-gradient(135deg,#c8f542,#8b5cf6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; }
+    /* ── Project card ── */
+    .pcard { transition: transform .28s, border-color .28s, box-shadow .28s; }
+    .pcard:hover { transform: translateY(-5px); border-color: rgba(200,245,66,.25) !important; box-shadow: 0 20px 50px rgba(200,245,66,.06); }
+    .pcard:hover .arr { transform: translate(3px, -3px); }
+    .arr { transition: transform .22s; }
+
+    /* ── Tag ── */
+    .tag {
+      display: inline-block; padding: .2rem .6rem; border-radius: 999px;
+      font-size: .68rem; font-weight: 500; letter-spacing: .03em;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
+      color: #9a9a9a; transition: .2s; white-space: nowrap;
+    }
+    .tag:hover, .tag.hi { background: rgba(200,245,66,.1); color: #c8f542; border-color: rgba(200,245,66,.2); }
+
+    /* ── Timeline ── */
+    .tl-line { background: linear-gradient(to bottom, #c8f542, #8b5cf6 65%, transparent); }
 
     /* ── Section label ── */
-    .slabel { font-size:.68rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#c8f542; }
+    .sl { font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #c8f542; }
+
+    /* ── Photo placeholder ── */
+    .photo-box {
+      width: 100%; height: 420px;
+      border-radius: 1.1rem;
+      background: linear-gradient(155deg, #1c1c1c 0%, #131313 100%);
+      border: 1px solid #242424;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
+    }
+    .photo-wrap { position: relative; }
+    .photo-wrap::before {
+      content: ''; position: absolute; inset: -2px; border-radius: 1.2rem;
+      background: linear-gradient(135deg, #c8f542, #8b5cf6); z-index: -1; opacity: .5;
+    }
+
+    /* ── Noise card ── */
+    .nc { background: linear-gradient(135deg, #131313, #161616); }
+
+    /* ── Cursor ring (native cursor stays) ── */
+    #cring {
+      pointer-events: none; position: fixed;
+      width: 42px; height: 42px;
+      border: 1.5px solid rgba(200,245,66,.4);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9998;
+      transition: width .2s, height .2s, border-color .2s;
+    }
 
     /* ── Insight hover ── */
-    .insight-card { transition:border-color .3s; }
-    .insight-card:hover { border-color:rgba(139,92,246,.4) !important; }
+    .icard { transition: border-color .3s; }
+    .icard:hover { border-color: rgba(139,92,246,.4) !important; }
 
-    /* ── Noise surface ── */
-    .noise { background:linear-gradient(135deg,#131313 0%,#161616 100%); }
+    /* ── Footer scan line ── */
+    @keyframes scan { 0% { top: 0% } 100% { top: 100% } }
+    .scan-line {
+      position: absolute; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,245,66,.15), transparent);
+      animation: scan 5s linear infinite;
+    }
 
-    /* ── Skill bar ── */
-    .skill-bar-fill { height:3px; border-radius:999px; background:linear-gradient(90deg,#c8f542,#8b5cf6); }
-
-    @media(max-width:768px){ .marquee-inner{ animation-duration:18s; } }
+    /* Safe text — no overflow */
+    h1, h2, h3 { overflow-wrap: break-word; word-break: break-word; hyphens: auto; }
+    p, li { overflow-wrap: break-word; }
   </style>
 </head>
 <body class="bg-bg text-text antialiased">
 
-<!-- CURSOR -->
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
+<!-- Cursor ring -->
+<div id="cring"></div>
 
-<!-- ════════════════════════════ NAVBAR ════ -->
+<!-- ════════ NAVBAR ════════ -->
 <header id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-transparent">
-  <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="#hero" class="text-xs font-black tracking-widest uppercase hover:text-accent transition-colors">Daniel<span class="text-accent"> Cruz Castro</span></a>
-    <ul class="hidden md:flex items-center gap-8 text-xs font-medium tracking-widest uppercase text-muted">
+  <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
+    <a href="#hero" class="shrink-0 text-xs font-black tracking-widest uppercase hover:text-accent transition-colors">
+      Daniel <span class="text-accent">Leonardo Cruz Castro</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-7 text-xs font-semibold tracking-widest uppercase text-muted">
       <li><a href="#about"      class="hover:text-text transition-colors">About</a></li>
       <li><a href="#projects"   class="hover:text-text transition-colors">Projects</a></li>
       <li><a href="#experience" class="hover:text-text transition-colors">Experience</a></li>
-      <li><a href="#insights"   class="hover:text-text transition-colors">Insights</a></li>
-      <li><a href="#contact" class="btn-p px-5 py-2 rounded-full text-xs">Let's Talk</a></li>
+      <li><a href="#research"   class="hover:text-text transition-colors">Research</a></li>
+      <li><a href="#contact"    class="btn-p !py-2 !px-5 !text-xs">Let's Talk</a></li>
     </ul>
-    <button id="menu-btn" class="md:hidden text-muted hover:text-text transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <button id="mbtn" class="md:hidden text-muted hover:text-text transition-colors" aria-label="Menu">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
     </button>
   </nav>
-  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border px-6 py-6 space-y-4">
-    <a href="#about"      class="block text-sm text-muted hover:text-accent transition-colors" onclick="closeMob()">About</a>
-    <a href="#projects"   class="block text-sm text-muted hover:text-accent transition-colors" onclick="closeMob()">Projects</a>
-    <a href="#experience" class="block text-sm text-muted hover:text-accent transition-colors" onclick="closeMob()">Experience</a>
-    <a href="#insights"   class="block text-sm text-muted hover:text-accent transition-colors" onclick="closeMob()">Insights</a>
-    <a href="#contact" class="block text-sm btn-p px-5 py-2.5 rounded-full text-center" onclick="closeMob()">Let's Talk</a>
+  <div id="mmenu" class="hidden md:hidden bg-surface border-t border-border px-6 py-5 space-y-4">
+    <a href="#about"      class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">About</a>
+    <a href="#projects"   class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Projects</a>
+    <a href="#experience" class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Experience</a>
+    <a href="#research"   class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Research</a>
+    <a href="#contact"    class="block btn-p !text-sm text-center" onclick="cmob()">Let's Talk</a>
   </div>
 </header>
 
-<!-- ════════════════════════════ HERO ════ -->
+<!-- ════════ HERO ════════ -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center grid-bg overflow-hidden">
-  <div class="blob w-[500px] h-[500px] bg-accent opacity-[0.055] -top-20 -left-40 animate-float"></div>
-  <div class="blob w-96 h-96 bg-accentB opacity-[0.065] bottom-10 right-0" style="animation:float 9s ease-in-out infinite reverse"></div>
-  <div style="position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,245,66,.15),transparent);animation:scan 5s linear infinite;pointer-events:none;"></div>
+  <div class="scan-line"></div>
+  <div class="blob w-96 h-96 bg-accent opacity-[.055] -top-10 -left-32" style="animation:float 7s ease-in-out infinite"></div>
+  <div class="blob w-80 h-80 bg-accentB opacity-[.065] bottom-10 right-0" style="animation:float 9s ease-in-out infinite reverse"></div>
+  <style>@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}</style>
 
   <div class="max-w-7xl mx-auto px-6 pt-28 pb-20 relative z-10 w-full">
 
-    <!-- Badge -->
-    <div class="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-1.5 mb-8" style="animation:fadeUp .7s ease both">
-      <span class="w-2 h-2 rounded-full bg-accent animate-pulse-slow"></span>
+    <!-- Status pill -->
+    <div class="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-1.5 mb-8">
+      <span class="w-2 h-2 rounded-full bg-accent" style="animation:pulse 2.5s ease-in-out infinite"></span>
       <span class="text-xs text-muted font-medium">Open to strategic collaborations · Bogotá, Colombia</span>
     </div>
+    <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}</style>
 
-    <!-- Full name -->
-    <div class="text-xs font-bold tracking-[.22em] uppercase text-muted mb-4" style="animation:fadeUp .8s ease .05s both">
+    <!-- Full name label -->
+    <p class="text-xs font-bold tracking-[.2em] uppercase text-muted mb-5">
       Daniel Leonardo Cruz Castro
-    </div>
+    </p>
 
     <!-- Headline -->
-    <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] font-black leading-[.95] tracking-tight mb-6" style="animation:fadeUp .8s ease .1s both">
-      I make things<br/>happen<span class="text-accent">.</span><br/>
-      <span class="grad">Data. Strategy.<br/>Real Results.</span>
+    <h1 class="font-black leading-[1] tracking-tight mb-6 text-[clamp(2.6rem,7vw,5.5rem)]">
+      I make things<br>happen<span class="text-accent">.</span><br>
+      <span class="grad">Data. Strategy.<br>Real Results.</span>
     </h1>
 
-    <p class="text-lg md:text-xl text-muted max-w-2xl leading-relaxed mt-8 mb-4" style="animation:fadeUp .8s ease .22s both">
-      <span class="text-text font-semibold">Daniel Leonardo Cruz Castro</span> — executive with
-      <span class="text-text font-semibold">15+ years</span> leading data, analytics and digital transformation
-      in financial services and aviation. Currently <span class="text-text font-semibold">Data Governance &amp; Analytics COE Manager at Avianca</span>
-      and Associate at <span class="text-text font-semibold">CDO LATAM</span>.
+    <p class="text-base md:text-lg text-muted max-w-2xl leading-relaxed mb-3">
+      Executive with <strong class="text-text">15+ years</strong> leading data, analytics and digital transformation
+      in financial services and aviation. Currently
+      <strong class="text-text">Data Governance &amp; Analytics COE Manager at Avianca</strong>
+      and Associate at <strong class="text-text">CDO LATAM</strong>.
     </p>
-    <p class="text-sm text-muted italic mb-10" style="animation:fadeUp .8s ease .3s both">
+    <p class="text-sm text-muted italic mb-10 max-w-xl">
       "Turning strategy, data, and people into real business results."
     </p>
 
     <!-- CTAs -->
-    <div class="flex flex-wrap gap-4" style="animation:fadeUp .8s ease .4s both">
-      <a href="#projects" class="btn-p px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2">
+    <div class="flex flex-wrap gap-3 mb-20">
+      <a href="#projects" class="btn-p">
         View Projects
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
       </a>
-      <a href="#about"   class="btn-o px-7 py-3.5 rounded-full text-sm">About Me</a>
-      <a href="#contact" class="btn-o px-7 py-3.5 rounded-full text-sm">Contact</a>
+      <a href="#about"   class="btn-o">About Me</a>
+      <a href="#contact" class="btn-o">Contact</a>
     </div>
 
     <!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-14 border-t border-border" style="animation:fadeUp .8s ease .52s both">
+    <div class="border-t border-border pt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
       <div>
-        <div class="text-4xl font-black">15<span class="text-accent">+</span></div>
-        <div class="text-xs text-muted mt-1 font-medium">Years of experience</div>
+        <div class="text-3xl md:text-4xl font-black">15<span class="text-accent">+</span></div>
+        <div class="text-xs text-muted mt-1">Years of experience</div>
       </div>
       <div>
-        <div class="text-4xl font-black">1,600<span class="text-accent">+</span></div>
-        <div class="text-xs text-muted mt-1 font-medium">People led at peak</div>
+        <div class="text-3xl md:text-4xl font-black">1,600<span class="text-accent">+</span></div>
+        <div class="text-xs text-muted mt-1">People led at peak</div>
       </div>
       <div>
-        <div class="text-4xl font-black">$11T</div>
-        <div class="text-xs text-muted mt-1 font-medium">COP loan portfolio led</div>
+        <div class="text-3xl md:text-4xl font-black">$11T</div>
+        <div class="text-xs text-muted mt-1">COP portfolio led</div>
       </div>
       <div>
-        <div class="text-4xl font-black">300K<span class="text-accent">+</span></div>
-        <div class="text-xs text-muted mt-1 font-medium">Digital accounts opened</div>
+        <div class="text-3xl md:text-4xl font-black">300K<span class="text-accent">+</span></div>
+        <div class="text-xs text-muted mt-1">Digital accounts opened</div>
       </div>
     </div>
   </div>
 
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-35">
-    <span class="text-xs tracking-widest uppercase">Scroll</span>
-    <div class="w-px h-8 bg-muted"></div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+    <span class="text-[10px] tracking-widest uppercase">Scroll</span>
+    <div class="w-px h-7 bg-muted"></div>
   </div>
 </section>
 
-<!-- ════════════════════════════ MARQUEE ════ -->
-<div class="py-5 border-y border-border bg-surface overflow-hidden">
-  <div class="marquee-wrap">
-    <div class="marquee-inner">
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Data Governance</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Analytics Strategy</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Digital Transformation</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">AI Governance</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Data Products</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">DAMA Framework</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Databricks</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">MLOps</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">FinTech</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">CDO LATAM</span><span class="text-accent font-black">✦</span>
-      <!-- dupe -->
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Data Governance</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Analytics Strategy</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Digital Transformation</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">AI Governance</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Data Products</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">DAMA Framework</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">Databricks</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">MLOps</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">FinTech</span><span class="text-accent font-black">✦</span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-muted">CDO LATAM</span><span class="text-accent font-black">✦</span>
+<!-- ════════ MARQUEE ════════ -->
+<div class="py-4 border-y border-border bg-surface overflow-hidden">
+  <div class="mq-wrap">
+    <div class="mq-inner">
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Data Governance</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Analytics Strategy</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Digital Transformation</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">AI Governance</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Data Products</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">DAMA Framework</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Databricks</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">MLOps</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">FinTech</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">CDO LATAM</span><span class="text-accent font-black">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Data Governance</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Analytics Strategy</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Digital Transformation</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">AI Governance</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Data Products</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">DAMA Framework</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">Databricks</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">MLOps</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">FinTech</span><span class="text-accent font-black">✦</span>
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-muted">CDO LATAM</span><span class="text-accent font-black">✦</span>
     </div>
   </div>
 </div>
 
-<!-- ════════════════════════════ ABOUT ════ -->
-<section id="about" class="py-32 max-w-7xl mx-auto px-6">
-  <div class="reveal grid lg:grid-cols-2 gap-16 items-start">
+<!-- ════════ ABOUT ════════ -->
+<section id="about" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="reveal grid lg:grid-cols-2 gap-14 items-start">
 
-    <!-- Photo column -->
-    <div class="flex flex-col gap-6">
-      <div class="photo-wrap max-w-sm mx-auto lg:mx-0 w-full">
-        <!-- PHOTO: replace src with your actual photo file or base64 -->
-        <div class="photo-placeholder" id="photo-container">
-          <div class="photo-initials">DLC</div>
-          <div class="text-center px-6">
-            <div class="text-xs text-muted font-medium">Daniel Leonardo Cruz Castro</div>
-            <div class="text-xs text-muted opacity-60 mt-1">Data Governance & Analytics COE Manager · Avianca</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick facts card -->
-      <div class="noise border border-border rounded-2xl p-5 max-w-sm mx-auto lg:mx-0 w-full">
-        <div class="space-y-3">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm">📍</div>
-            <div>
-              <div class="text-xs text-muted">Location</div>
-              <div class="text-sm font-semibold text-text">Bogotá, Colombia</div>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm">🌐</div>
-            <div>
-              <div class="text-xs text-muted">Languages</div>
-              <div class="text-sm font-semibold text-text">Spanish (Native) · English (B2) · Portuguese (Basic)</div>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm">✉️</div>
-            <div>
-              <div class="text-xs text-muted">Email</div>
-              <a href="mailto:lecruk@gmail.com" class="text-sm font-semibold text-accent hover:underline">lecruk@gmail.com</a>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm">💼</div>
-            <div>
-              <div class="text-xs text-muted">LinkedIn</div>
-              <a href="https://linkedin.com/in/dlcruzc" target="_blank" class="text-sm font-semibold text-accent hover:underline">linkedin.com/in/dlcruzc</a>
+      <!-- Photo + quick info -->
+      <div class="space-y-5">
+        <div class="photo-wrap max-w-sm mx-auto lg:mx-0">
+          <div class="photo-box">
+            <!-- Replace with <img src="photo.jpg" class="photo-box object-cover" alt="Daniel Leonardo Cruz Castro"> once photo is uploaded -->
+            <div class="text-[5rem] font-black leading-none grad">DLC</div>
+            <div class="text-center px-4">
+              <div class="text-sm font-semibold text-text">Daniel Leonardo Cruz Castro</div>
+              <div class="text-xs text-muted mt-1">Data Governance & Analytics COE Manager · Avianca</div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Content column -->
-    <div>
-      <div class="slabel mb-5">About</div>
-      <h2 class="text-4xl md:text-5xl font-black leading-tight mb-8 tracking-tight">
-        Data-first.<br/>Always in service<br/>of the <span class="grad">business.</span>
-      </h2>
-
-      <div class="space-y-5 text-[15px] text-muted leading-relaxed mb-8">
-        <p>Executive with <strong class="text-text font-semibold">15+ years</strong> leading complete business verticals in Financial Services — combining expertise in digital transformation, analytics, AI, and operations with sharp commercial and strategic vision.</p>
-        <p>I specialize in uniting <strong class="text-text font-semibold">analytical and AI capabilities</strong> with broad business perspective to make the most challenging transformation projects, the most visible changes, and the highest-budget initiatives a reality.</p>
-        <p>I build and lead teams of analysts, innovators, commercial professionals, and operators. I have had the honor of leading teams of up to <strong class="text-text font-semibold">1,600 people</strong>. I lead by teaching. I am extremely proactive.</p>
-        <div class="border-l-2 border-accent pl-4 py-1">
-          <p class="text-text italic">"I unite data skills, technology knowledge, and operational expertise with business and strategic vision — making good decisions and influencing people at every level."</p>
-        </div>
-      </div>
-
-      <!-- Skills grid -->
-      <div class="slabel mb-4">Technical Skills</div>
-      <div class="flex flex-wrap gap-2 mb-8">
-        <span class="tag tag-accent">Data Governance · DAMA</span>
-        <span class="tag">Databricks · Teradata</span>
-        <span class="tag">Python · R · SAS</span>
-        <span class="tag">Power BI · Tableau · SAP BO</span>
-        <span class="tag">MLOps · DataOps</span>
-        <span class="tag">Data Lake / Warehouse</span>
-        <span class="tag">Google Analytics · GTM</span>
-        <span class="tag">Agile · N8N · Copilot</span>
-        <span class="tag">Claude Code</span>
-        <span class="tag">Model Monitoring</span>
-      </div>
-
-      <!-- Education -->
-      <div class="slabel mb-4">Education</div>
-      <div class="space-y-3">
-        <div class="noise border border-border rounded-xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-accentB/10 flex items-center justify-center text-xs font-black text-accentB shrink-0">MBA</div>
-          <div>
-            <div class="text-sm font-bold text-text">MBA, Business Administration</div>
-            <div class="text-xs text-muted">Universidade de São Paulo — <span class="text-accent">#1 Brazil</span> · 2020–2022</div>
+        <!-- Quick facts -->
+        <div class="nc border border-border rounded-2xl p-5 max-w-sm mx-auto lg:mx-0 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm shrink-0">📍</span>
+            <div><div class="text-xs text-muted">Location</div><div class="text-sm font-semibold">Bogotá, Colombia</div></div>
           </div>
-        </div>
-        <div class="noise border border-border rounded-xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-accentB/10 flex items-center justify-center text-xs font-black text-accentB shrink-0">MSc</div>
-          <div>
-            <div class="text-sm font-bold text-text">MSc Business Intelligence</div>
-            <div class="text-xs text-muted">Universitat de Barcelona — <span class="text-accent">#1 Spain</span> · 2012–2013 · Academic Excellence Grant</div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm shrink-0">🌐</span>
+            <div><div class="text-xs text-muted">Languages</div><div class="text-sm font-semibold">Spanish · English B2 · Portuguese</div></div>
           </div>
-        </div>
-        <div class="noise border border-border rounded-xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-accentB/10 flex items-center justify-center text-xs font-black text-accentB shrink-0">MSc</div>
-          <div>
-            <div class="text-sm font-bold text-text">MSc Marketing</div>
-            <div class="text-xs text-muted">Universidad de Manizales · 2015–2017</div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm shrink-0">✉️</span>
+            <div><div class="text-xs text-muted">Email</div><a href="mailto:lecruk@gmail.com" class="text-sm font-semibold text-accent hover:underline">lecruk@gmail.com</a></div>
           </div>
-        </div>
-        <div class="noise border border-border rounded-xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-xs font-black text-muted shrink-0">BSc</div>
-          <div>
-            <div class="text-sm font-bold text-text">BSc Statistics</div>
-            <div class="text-xs text-muted">Universidad Nacional de Colombia · 2007–2012</div>
-          </div>
-        </div>
-        <div class="noise border border-border rounded-xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-xs font-black text-muted shrink-0">ML</div>
-          <div>
-            <div class="text-sm font-bold text-text">ML Specialization</div>
-            <div class="text-xs text-muted">Stanford University (Online) · Oct 2023–Jan 2024</div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-sm shrink-0">💼</span>
+            <div><div class="text-xs text-muted">LinkedIn</div><a href="https://linkedin.com/in/dlcruzc" target="_blank" class="text-sm font-semibold text-accent hover:underline">linkedin.com/in/dlcruzc</a></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Awards row -->
-  <div class="reveal mt-16 grid md:grid-cols-4 gap-4">
-    <div class="noise border border-border rounded-2xl p-5 text-center">
-      <div class="text-2xl mb-2">🏆</div>
-      <div class="text-sm font-bold text-text">Premio Platino</div>
-      <div class="text-xs text-muted mt-1">Fintech Americas 2020<br/>Movicuenta</div>
+      <!-- Bio -->
+      <div>
+        <div class="sl mb-4">About</div>
+        <h2 class="text-3xl md:text-4xl font-black leading-tight mb-7">
+          Data-first. Always in service<br>of the <span class="grad">business.</span>
+        </h2>
+        <div class="space-y-4 text-[15px] text-muted leading-relaxed">
+          <p>Executive with <strong class="text-text">15+ years</strong> leading complete business verticals in Financial Services — combining expertise in digital transformation, analytics, AI, and operations with sharp commercial and strategic vision.</p>
+          <p>I specialize in uniting <strong class="text-text">analytical and AI capabilities</strong> with broad business perspective to make the most challenging transformation projects a reality. I have led teams of up to <strong class="text-text">1,600 people</strong>. I lead by teaching.</p>
+          <blockquote class="border-l-2 border-accent pl-4 py-1 text-text italic text-[14px]">
+            "I unite data skills, technology knowledge, and operational expertise with business and strategic vision — making good decisions and influencing people at every level."
+          </blockquote>
+        </div>
+
+        <!-- Skills -->
+        <div class="sl mt-7 mb-3">Technical Skills</div>
+        <div class="flex flex-wrap gap-2 mb-7">
+          <span class="tag hi">Data Governance · DAMA</span>
+          <span class="tag">Databricks · Teradata</span>
+          <span class="tag">Python · R · SAS</span>
+          <span class="tag">Power BI · Tableau · SAP BO</span>
+          <span class="tag">MLOps · DataOps</span>
+          <span class="tag">Data Lake / Warehouse</span>
+          <span class="tag">Google Analytics · GTM</span>
+          <span class="tag">Agile · N8N · Claude Code</span>
+        </div>
+
+        <!-- Education -->
+        <div class="sl mb-3">Education</div>
+        <div class="space-y-2">
+          <div class="nc border border-border rounded-xl p-4 flex items-start gap-3">
+            <span class="text-xs font-black text-accentB w-8 h-8 rounded-lg bg-accentB/10 flex items-center justify-center shrink-0">MBA</span>
+            <div><div class="text-sm font-bold">MBA, Business Administration</div><div class="text-xs text-muted">Universidade de São Paulo — <span class="text-accent">#1 Brazil</span> · 2020–2022</div></div>
+          </div>
+          <div class="nc border border-border rounded-xl p-4 flex items-start gap-3">
+            <span class="text-xs font-black text-accentB w-8 h-8 rounded-lg bg-accentB/10 flex items-center justify-center shrink-0">MSc</span>
+            <div><div class="text-sm font-bold">MSc Business Intelligence</div><div class="text-xs text-muted">Universitat de Barcelona — <span class="text-accent">#1 Spain</span> · 2012–2013 · Academic Excellence Grant</div></div>
+          </div>
+          <div class="nc border border-border rounded-xl p-4 flex items-start gap-3">
+            <span class="text-xs font-black text-accentB w-8 h-8 rounded-lg bg-accentB/10 flex items-center justify-center shrink-0">MSc</span>
+            <div><div class="text-sm font-bold">MSc Marketing</div><div class="text-xs text-muted">Universidad de Manizales · 2015–2017</div></div>
+          </div>
+          <div class="nc border border-border rounded-xl p-4 flex items-start gap-3">
+            <span class="text-xs font-black text-muted w-8 h-8 rounded-lg bg-surface flex items-center justify-center shrink-0">BSc</span>
+            <div><div class="text-sm font-bold">BSc Statistics</div><div class="text-xs text-muted">Universidad Nacional de Colombia · 2007–2012</div></div>
+          </div>
+          <div class="nc border border-border rounded-xl p-4 flex items-start gap-3">
+            <span class="text-xs font-black text-muted w-8 h-8 rounded-lg bg-surface flex items-center justify-center shrink-0">ML</span>
+            <div><div class="text-sm font-bold">ML Specialization</div><div class="text-xs text-muted">Stanford University (Online) · Oct 2023–Jan 2024</div></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="noise border border-border rounded-2xl p-5 text-center">
-      <div class="text-2xl mb-2">📊</div>
-      <div class="text-sm font-bold text-text">Asobancaria Award</div>
-      <div class="text-xs text-muted mt-1">Economics Excellence<br/>2021 & 2022</div>
-    </div>
-    <div class="noise border border-border rounded-2xl p-5 text-center">
-      <div class="text-2xl mb-2">🎓</div>
-      <div class="text-sm font-bold text-text">20+ Theses Directed</div>
-      <div class="text-xs text-muted mt-1">5 scientific publications<br/>Graduate level</div>
-    </div>
-    <div class="noise border border-border rounded-2xl p-5 text-center">
-      <div class="text-2xl mb-2">🎤</div>
-      <div class="text-sm font-bold text-text">International Speaker</div>
-      <div class="text-xs text-muted mt-1">Statistics, Data Mining<br/>Marketing Analytics</div>
+
+    <!-- Awards -->
+    <div class="reveal mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="nc border border-border rounded-2xl p-5 text-center">
+        <div class="text-2xl mb-2">🏆</div>
+        <div class="text-sm font-bold">Premio Platino</div>
+        <div class="text-xs text-muted mt-1">Fintech Americas 2020 · Movicuenta</div>
+      </div>
+      <div class="nc border border-border rounded-2xl p-5 text-center">
+        <div class="text-2xl mb-2">📊</div>
+        <div class="text-sm font-bold">Asobancaria Award</div>
+        <div class="text-xs text-muted mt-1">Economics Excellence 2021 & 2022</div>
+      </div>
+      <div class="nc border border-border rounded-2xl p-5 text-center">
+        <div class="text-2xl mb-2">🎓</div>
+        <div class="text-sm font-bold">20+ Theses Directed</div>
+        <div class="text-xs text-muted mt-1">5 scientific publications</div>
+      </div>
+      <div class="nc border border-border rounded-2xl p-5 text-center">
+        <div class="text-2xl mb-2">🎤</div>
+        <div class="text-sm font-bold">International Speaker</div>
+        <div class="text-xs text-muted mt-1">Statistics, Data Mining, Marketing</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════ PROJECTS ════ -->
-<section id="projects" class="py-32 border-t border-border">
+<!-- ════════ PROJECTS ════════ -->
+<section id="projects" class="py-24 md:py-32 border-t border-border">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="reveal flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-      <div>
-        <div class="slabel mb-4">Projects</div>
-        <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">Selected Work</h2>
-      </div>
-      <p class="text-muted text-sm max-w-sm leading-relaxed">Real problems. Real solutions. Measurable impact — across banking, fintech and aviation.</p>
+    <div class="reveal mb-14">
+      <div class="sl mb-3">Projects</div>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight">Selected Work</h2>
+      <p class="text-muted text-sm mt-3 max-w-lg">Real problems. Real solutions. Measurable impact — across banking, fintech and aviation.</p>
     </div>
 
     <!-- Featured -->
-    <div class="reveal project-card bg-surface border border-border rounded-3xl p-8 md:p-10 mb-6 group">
-      <div class="flex flex-col lg:flex-row lg:items-start gap-8">
+    <div class="reveal pcard nc border border-border rounded-3xl p-7 md:p-10 mb-6 group">
+      <div class="flex flex-col lg:flex-row gap-8">
         <div class="flex-1">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="slabel">Featured · 2025 – Present</span>
+          <div class="flex flex-wrap items-center gap-2 mb-5">
+            <span class="sl">Featured · 2025 – Present</span>
             <span class="text-xs text-muted border border-border rounded-full px-3 py-0.5">Avianca</span>
             <span class="text-xs border border-accent/30 text-accent rounded-full px-3 py-0.5">Current role</span>
           </div>
-          <h3 class="text-2xl md:text-3xl font-black text-text mb-6 leading-tight">Enterprise Data Governance Program<br/><span class="text-muted text-xl font-semibold">& AI Council Leadership</span></h3>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div>
-              <div class="text-xs text-muted uppercase tracking-widest mb-2 font-semibold">Problem</div>
-              <p class="text-sm text-muted leading-relaxed">Decentralized analytics teams operating in silos — no unified data ownership, quality standards, or governance accountability across the airline.</p>
-            </div>
-            <div>
-              <div class="text-xs text-muted uppercase tracking-widest mb-2 font-semibold">Solution</div>
-              <p class="text-sm text-muted leading-relaxed">Designed a federated governance operating model with data domains, stewardship roles, and a Data Council aligned to DAMA DMBOK. Simultaneously stood up the AI Council for GenAI governance.</p>
-            </div>
-            <div>
-              <div class="text-xs text-muted uppercase tracking-widest mb-2 font-semibold">Impact</div>
-              <p class="text-sm text-muted leading-relaxed">Enterprise-wide data governance foundation enabling scalable self-service analytics. Active GenAI adoption roadmap and AI ethics framework across Avianca's full operation.</p>
-            </div>
+          <h3 class="text-xl md:text-2xl font-black mb-6 leading-snug">
+            Enterprise Data Governance Program & AI Council Leadership
+          </h3>
+          <div class="grid md:grid-cols-3 gap-5">
+            <div><div class="text-xs text-muted uppercase tracking-widest mb-2 font-semibold">Problem</div><p class="text-sm text-muted leading-relaxed">Decentralized analytics teams in silos — no unified data ownership, quality standards, or governance accountability.</p></div>
+            <div><div class="text-xs text-muted uppercase tracking-widest mb-2 font-semibold">Solution</div><p class="text-sm text-muted leading-relaxed">Federated governance model with data domains, stewardship roles, a Data Council (DAMA DMBOK), and an AI Council for GenAI.</p></div>
+            <div><div class="text-xs text-muted uppercase tracking-widest mb-2 font-semibold">Impact</div><p class="text-sm text-muted leading-relaxed">Enterprise data governance foundation enabling scalable self-service analytics and responsible GenAI adoption across Avianca.</p></div>
           </div>
         </div>
-        <div class="lg:w-48 flex lg:flex-col items-start lg:items-end gap-2 flex-wrap">
-          <span class="tag tag-accent">Data Governance</span>
-          <span class="tag">DAMA DMBOK</span>
-          <span class="tag">Federated Model</span>
-          <span class="tag">AI Council</span>
-          <span class="tag">GenAI Ethics</span>
-          <span class="tag">Data Products</span>
-          <div class="w-10 h-10 rounded-full border border-border flex items-center justify-center arrow-icon mt-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
+        <div class="lg:w-44 flex flex-wrap lg:flex-col gap-2 items-start">
+          <span class="tag hi">Data Governance</span><span class="tag">DAMA DMBOK</span>
+          <span class="tag">Federated Model</span><span class="tag">AI Council</span>
+          <span class="tag">GenAI Ethics</span><span class="tag">Data Products</span>
+          <div class="w-9 h-9 rounded-full border border-border flex items-center justify-center arr mt-1">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
           </div>
         </div>
       </div>
     </div>
 
     <!-- 2-col grid -->
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-2 gap-5">
 
-      <div class="reveal project-card bg-surface border border-border rounded-3xl p-7 group">
-        <div class="flex items-center justify-between mb-5">
+      <div class="reveal pcard nc border border-border rounded-3xl p-6 group">
+        <div class="flex items-center justify-between mb-4">
           <span class="text-xs text-muted">Banco Agrario · 2020–2022</span>
-          <div class="w-9 h-9 rounded-full border border-border flex items-center justify-center arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+          <div class="w-8 h-8 rounded-full border border-border flex items-center justify-center arr shrink-0"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
         </div>
-        <h3 class="text-xl font-black text-text mb-3 leading-tight">Movicuenta — Digital Banking at Scale</h3>
-        <p class="text-sm text-muted leading-relaxed mb-3">Colombia's largest public bank needed fully digital account opening for underserved agricultural populations. Led product launch from scratch: <span class="text-text font-semibold">300K+ accounts opened</span> via mobile — awarded Premio Platino at Fintech Americas 2020.</p>
-        <div class="flex items-center gap-2 text-xs text-accent font-semibold mb-5">🏆 Premio Platino · Fintech Americas 2020</div>
-        <div class="flex flex-wrap gap-2"><span class="tag">Digital Banking</span><span class="tag">Fintech</span><span class="tag">Mobile</span><span class="tag">Product Launch</span></div>
+        <h3 class="text-lg font-black mb-3 leading-snug">Movicuenta — Digital Banking at Scale</h3>
+        <p class="text-sm text-muted leading-relaxed mb-2">Led product launch from scratch: <strong class="text-text">300K+ accounts</strong> opened via mobile. Colombia's first fully digital account for agricultural populations.</p>
+        <p class="text-xs text-accent font-semibold mb-4">🏆 Premio Platino · Fintech Americas 2020</p>
+        <div class="flex flex-wrap gap-1.5"><span class="tag">Digital Banking</span><span class="tag">Fintech</span><span class="tag">Mobile</span><span class="tag">Product Launch</span></div>
       </div>
 
-      <div class="reveal project-card bg-surface border border-border rounded-3xl p-7 group">
-        <div class="flex items-center justify-between mb-5">
+      <div class="reveal pcard nc border border-border rounded-3xl p-6 group">
+        <div class="flex items-center justify-between mb-4">
           <span class="text-xs text-muted">Banco Agrario · 2020–2022</span>
-          <div class="w-9 h-9 rounded-full border border-border flex items-center justify-center arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+          <div class="w-8 h-8 rounded-full border border-border flex items-center justify-center arr shrink-0"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
         </div>
-        <h3 class="text-xl font-black text-text mb-3 leading-tight">Self-Service Digital Credit & Referral Platform</h3>
-        <p class="text-sm text-muted leading-relaxed mb-3">Eliminated branch dependency for credit. Launched <em>Solicita tu Crédito Digital</em> (<span class="text-text font-semibold">COP $15B+ disbursed</span>) and <em>Portal de Referidos</em> (<span class="text-text font-semibold">COP $20B+ disbursed</span>). Grew campaign analytics from 10% → 50% of total production in 6 months.</p>
-        <div class="flex flex-wrap gap-2"><span class="tag">Digital Credit</span><span class="tag">Analytics</span><span class="tag">CRM</span><span class="tag">AgTech</span></div>
+        <h3 class="text-lg font-black mb-3 leading-snug">Self-Service Digital Credit & Referral Platform</h3>
+        <p class="text-sm text-muted leading-relaxed mb-4">Eliminated branch dependency for credit. Launched <em>Solicita tu Crédito Digital</em> (<strong class="text-text">COP $15B+</strong>) and <em>Portal de Referidos</em> (<strong class="text-text">COP $20B+</strong>). Grew campaign analytics 10% → 50% of production in 6 months.</p>
+        <div class="flex flex-wrap gap-1.5"><span class="tag">Digital Credit</span><span class="tag">Analytics</span><span class="tag">CRM</span><span class="tag">AgTech</span></div>
       </div>
 
-      <div class="reveal project-card bg-surface border border-border rounded-3xl p-7 group">
-        <div class="flex items-center justify-between mb-5">
+      <div class="reveal pcard nc border border-border rounded-3xl p-6 group">
+        <div class="flex items-center justify-between mb-4">
           <span class="text-xs text-muted">Itaú Colombia · 2017–2019</span>
-          <div class="w-9 h-9 rounded-full border border-border flex items-center justify-center arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+          <div class="w-8 h-8 rounded-full border border-border flex items-center justify-center arr shrink-0"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
         </div>
-        <h3 class="text-xl font-black text-text mb-3 leading-tight">Lead Management & Analytics-Driven Sales Transformation</h3>
-        <p class="text-sm text-muted leading-relaxed mb-3">Analytics contribution to commercial production was below 10%. Built the full lead management strategy, scoring models, and data culture — growing analytics-driven production from <span class="text-text font-semibold">&lt;10% → 70%</span> in two years. Exceeded 200% of digital product sales budget.</p>
-        <div class="flex flex-wrap gap-2"><span class="tag">Lead Management</span><span class="tag">ML Models</span><span class="tag">CRM</span><span class="tag">Data Culture</span></div>
+        <h3 class="text-lg font-black mb-3 leading-snug">Lead Management & Analytics-Driven Sales Transformation</h3>
+        <p class="text-sm text-muted leading-relaxed mb-4">Analytics contribution was &lt;10% of commercial production. Built scoring models and data culture — grew to <strong class="text-text">70%</strong> in two years. Exceeded <strong class="text-text">200%</strong> of digital product sales budget.</p>
+        <div class="flex flex-wrap gap-1.5"><span class="tag">Lead Management</span><span class="tag">ML Models</span><span class="tag">CRM</span><span class="tag">Data Culture</span></div>
       </div>
 
-      <div class="reveal project-card bg-surface border border-border rounded-3xl p-7 group">
-        <div class="flex items-center justify-between mb-5">
+      <div class="reveal pcard nc border border-border rounded-3xl p-6 group">
+        <div class="flex items-center justify-between mb-4">
           <span class="text-xs text-muted">Banco Agrario · 2023–2024</span>
-          <div class="w-9 h-9 rounded-full border border-border flex items-center justify-center arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+          <div class="w-8 h-8 rounded-full border border-border flex items-center justify-center arr shrink-0"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
         </div>
-        <h3 class="text-xl font-black text-text mb-3 leading-tight">National Digital Transformation Program</h3>
-        <p class="text-sm text-muted leading-relaxed mb-3">Led bank-wide digital transformation: process dematerialization, credit flow optimization, and deposit redesign. Built a dedicated transformation team of <span class="text-text font-semibold">30+ professionals</span> spanning technology, business, process and risk, while simultaneously managing national operations.</p>
-        <div class="flex flex-wrap gap-2"><span class="tag">Transformation</span><span class="tag">Process Design</span><span class="tag">Team Building</span><span class="tag">Operations</span></div>
+        <h3 class="text-lg font-black mb-3 leading-snug">National Digital Transformation Program</h3>
+        <p class="text-sm text-muted leading-relaxed mb-4">Led bank-wide digital transformation — process dematerialization, credit & deposit redesign. Built a <strong class="text-text">30+ person</strong> dedicated team spanning tech, business, process and risk.</p>
+        <div class="flex flex-wrap gap-1.5"><span class="tag">Transformation</span><span class="tag">Process Design</span><span class="tag">Team Building</span><span class="tag">Operations</span></div>
       </div>
 
-      <div class="reveal project-card bg-surface border border-border rounded-3xl p-7 group md:col-span-2">
+      <div class="reveal pcard nc border border-border rounded-3xl p-6 group md:col-span-2">
         <div class="flex flex-col md:flex-row md:items-start gap-6">
           <div class="flex-1">
-            <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center justify-between mb-4">
               <span class="text-xs text-muted">Banco Agrario · 2022–2023</span>
-              <div class="w-9 h-9 rounded-full border border-border flex items-center justify-center arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+              <div class="w-8 h-8 rounded-full border border-border flex items-center justify-center arr shrink-0"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
             </div>
-            <h3 class="text-xl font-black text-text mb-3 leading-tight">Agricultural & SME Banking Growth Strategy</h3>
-            <p class="text-sm text-muted leading-relaxed mb-3">Owned full P&amp;L strategy for Colombia's core agricultural banking business — a <span class="text-text font-semibold">COP $11T loan portfolio + $3T deposit base</span>. Also managed the National Strategic Alliances division, driving partnership-based growth across the country.</p>
+            <h3 class="text-lg font-black mb-3 leading-snug">Agricultural & SME Banking — COP $11T Portfolio</h3>
+            <p class="text-sm text-muted leading-relaxed">Owned full P&L strategy for Colombia's core agricultural banking business — <strong class="text-text">COP $11T loan portfolio + $3T deposit base</strong>. Also managed the National Strategic Alliances division driving partnership-based growth across the country.</p>
           </div>
-          <div class="md:w-56 flex flex-wrap md:flex-col gap-2">
-            <span class="tag">Commercial Banking</span><span class="tag">P&L Ownership</span><span class="tag">SME Banking</span><span class="tag">Strategic Alliances</span><span class="tag">Agricultural Finance</span>
+          <div class="md:w-52 flex flex-wrap gap-1.5 md:flex-col md:items-start">
+            <span class="tag">Commercial Banking</span><span class="tag">P&L Ownership</span>
+            <span class="tag">SME Banking</span><span class="tag">Strategic Alliances</span><span class="tag">Agricultural Finance</span>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════ EXPERIENCE ════ -->
-<section id="experience" class="py-32 border-t border-border bg-surface">
+<!-- ════════ EXPERIENCE ════════ -->
+<section id="experience" class="py-24 md:py-32 border-t border-border bg-surface">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="reveal mb-16">
-      <div class="slabel mb-4">Experience</div>
-      <h2 class="text-4xl md:text-5xl font-black tracking-tight">Career Timeline</h2>
+    <div class="reveal mb-14">
+      <div class="sl mb-3">Experience</div>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight">Career Timeline</h2>
       <p class="text-muted text-sm mt-3 max-w-lg">15+ years across aviation, banking, fintech and academia — always at the intersection of data, technology and business.</p>
     </div>
 
     <div class="relative">
       <div class="absolute left-0 md:left-6 top-0 bottom-0 w-px tl-line hidden md:block"></div>
-
       <div class="space-y-0">
 
         <!-- Avianca -->
         <div class="reveal md:pl-20 relative">
-          <div class="absolute left-0 md:left-[18px] top-3 w-3 h-3 rounded-full bg-accent hidden md:block ring-4 ring-surface"></div>
+          <div class="hidden md:block absolute left-[18px] top-3 w-3 h-3 rounded-full bg-accent ring-4 ring-surface"></div>
           <div class="border-b border-border pb-10 pt-1">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
               <div>
                 <div class="text-xs text-accent font-bold uppercase tracking-widest mb-1">Aug 2025 – Present</div>
-                <h3 class="text-xl font-black text-text">Data Governance & Analytics COE Manager</h3>
-                <div class="text-sm text-muted font-medium mt-0.5">Avianca</div>
+                <h3 class="text-lg font-black">Data Governance & Analytics COE Manager</h3>
+                <div class="text-sm text-muted mt-0.5">Avianca</div>
               </div>
-              <span class="self-start text-xs border border-accent/30 text-accent rounded-full px-3 py-1">Current</span>
+              <span class="self-start text-xs border border-accent/30 text-accent rounded-full px-3 py-1 whitespace-nowrap">Current</span>
             </div>
-            <ul class="space-y-2 mt-4">
-              <li class="text-sm text-muted flex items-start gap-2"><span class="text-accent mt-1 shrink-0">→</span>Stood up the enterprise data governance program with a federated operating model across decentralized analytics teams.</li>
-              <li class="text-sm text-muted flex items-start gap-2"><span class="text-accent mt-1 shrink-0">→</span>Redesigned the analytics operating model with a data product approach, enabling scalable self-service analytics.</li>
+            <ul class="space-y-2">
+              <li class="text-sm text-muted flex items-start gap-2"><span class="text-accent mt-1 shrink-0">→</span>Stood up enterprise data governance with a federated operating model across decentralized analytics teams.</li>
+              <li class="text-sm text-muted flex items-start gap-2"><span class="text-accent mt-1 shrink-0">→</span>Redesigned analytics operating model with data product approach, enabling scalable self-service analytics.</li>
               <li class="text-sm text-muted flex items-start gap-2"><span class="text-accent mt-1 shrink-0">→</span>Leads the AI Council: GenAI adoption roadmaps, AI ethics frameworks, and ML use-case governance.</li>
             </ul>
-            <div class="flex flex-wrap gap-2 mt-4"><span class="tag tag-accent">Data Governance</span><span class="tag">AI Council</span><span class="tag">GenAI</span><span class="tag">Databricks</span><span class="tag">DAMA DMBOK</span></div>
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag hi">Data Governance</span><span class="tag">AI Council</span><span class="tag">GenAI</span><span class="tag">Databricks</span></div>
           </div>
         </div>
 
         <!-- CDO LATAM -->
         <div class="reveal md:pl-20 relative">
-          <div class="absolute left-0 md:left-[18px] top-3 w-3 h-3 rounded-full bg-accentB hidden md:block ring-4 ring-surface"></div>
+          <div class="hidden md:block absolute left-[18px] top-3 w-3 h-3 rounded-full bg-accentB ring-4 ring-surface"></div>
           <div class="border-b border-border py-8">
             <div class="text-xs text-accentB font-bold uppercase tracking-widest mb-1">Mar 2026 – Present</div>
-            <h3 class="text-lg font-black text-text">Associate — Chief Data Officer Network</h3>
-            <div class="text-sm text-muted font-medium mt-0.5 mb-3">CDO LATAM</div>
-            <p class="text-sm text-muted">Member of the leading non-profit network of CDOs and Data & AI leaders across Latin America. Contributes to best practices, data culture, and digital transformation acceleration in the region.</p>
+            <h3 class="text-lg font-black">Associate — Chief Data Officer Network</h3>
+            <div class="text-sm text-muted mt-0.5 mb-3">CDO LATAM</div>
+            <p class="text-sm text-muted">Leading non-profit network of CDOs and Data & AI leaders across Latin America. Contributing to best practices, data culture, and digital transformation acceleration in the region.</p>
           </div>
         </div>
 
         <!-- Bancamia -->
         <div class="reveal md:pl-20 relative">
-          <div class="absolute left-0 md:left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted hidden md:block ring-4 ring-surface"></div>
+          <div class="hidden md:block absolute left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted ring-4 ring-surface"></div>
           <div class="border-b border-border py-10">
             <div class="text-xs text-muted font-bold uppercase tracking-widest mb-1">Dec 2024 – Aug 2025</div>
-            <h3 class="text-xl font-black text-text">Productivity & Commercial Development Manager</h3>
-            <div class="text-sm text-muted font-medium mt-0.5 mb-4">Bancamía — Banco de las Microfinanzas (Fundación BBVA)</div>
+            <h3 class="text-lg font-black">Productivity & Commercial Development Manager</h3>
+            <div class="text-sm text-muted mt-0.5 mb-4">Bancamía — Banco de las Microfinanzas (Fundación BBVA)</div>
             <ul class="space-y-2">
-              <li class="text-sm text-muted flex items-start gap-2"><span class="text-muted mt-1 shrink-0">→</span>Led data-driven commercial productivity strategy, incentive design, and channel performance management using BI/ML.</li>
-              <li class="text-sm text-muted flex items-start gap-2"><span class="text-muted mt-1 shrink-0">→</span>Unified commercial tracking and standardized executive dashboards, accelerating strategic decision-making.</li>
+              <li class="text-sm text-muted flex items-start gap-2"><span class="text-muted mt-1 shrink-0">→</span>Led data-driven commercial productivity strategy, incentive design, and channel performance using BI/ML.</li>
+              <li class="text-sm text-muted flex items-start gap-2"><span class="text-muted mt-1 shrink-0">→</span>Unified commercial tracking and standardized executive dashboards, accelerating strategic decisions.</li>
             </ul>
             <div class="flex flex-wrap gap-2 mt-4"><span class="tag">Commercial Strategy</span><span class="tag">BI/ML</span><span class="tag">Microfinance</span></div>
           </div>
         </div>
 
-        <!-- Banco Agrario grouped -->
+        <!-- Banco Agrario -->
         <div class="reveal md:pl-20 relative">
-          <div class="absolute left-0 md:left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted hidden md:block ring-4 ring-surface"></div>
+          <div class="hidden md:block absolute left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted ring-4 ring-surface"></div>
           <div class="border-b border-border py-10">
             <div class="text-xs text-muted font-bold uppercase tracking-widest mb-1">May 2020 – Dec 2024 · 4 yrs 8 mos</div>
-            <h3 class="text-xl font-black text-text mb-0.5">Banco Agrario de Colombia</h3>
+            <h3 class="text-lg font-black mb-1">Banco Agrario de Colombia</h3>
             <div class="text-sm text-accent font-semibold mb-5">Colombia's largest public bank — 3 executive roles</div>
             <div class="space-y-5 pl-4 border-l border-border">
               <div>
-                <div class="text-xs text-muted mb-0.5 font-medium">Nov 2023 – Dec 2024</div>
-                <div class="text-sm font-bold text-text">National Operations & Digital Transformation Manager</div>
-                <p class="text-sm text-muted mt-1.5">Led bank-wide digital transformation (dematerialization, credit & deposit flow optimization). Built and led 30+ person transformation team. Simultaneously oversaw national operations for all asset product processes.</p>
+                <div class="text-xs text-muted font-medium mb-0.5">Nov 2023 – Dec 2024 · National Operations & Digital Transformation Manager</div>
+                <p class="text-sm text-muted">Led bank-wide digital transformation. Built 30+ person team. Simultaneously oversaw national operations for all asset product processes.</p>
               </div>
               <div>
-                <div class="text-xs text-muted mb-0.5 font-medium">Nov 2022 – Nov 2023</div>
-                <div class="text-sm font-bold text-text">National Sales & Commercial Development Manager</div>
-                <p class="text-sm text-muted mt-1.5">Full ownership of Agricultural & SME Banking — COP $11T loan portfolio + $3T deposits. Managed National Strategic Alliances division.</p>
+                <div class="text-xs text-muted font-medium mb-0.5">Nov 2022 – Nov 2023 · National Sales & Commercial Development Manager</div>
+                <p class="text-sm text-muted">Full P&L ownership — COP $11T loan portfolio + $3T deposits. Managed National Strategic Alliances division.</p>
               </div>
               <div>
-                <div class="text-xs text-muted mb-0.5 font-medium">May 2020 – Nov 2022</div>
-                <div class="text-sm font-bold text-text">National Commercial Development & Digital Business Manager</div>
-                <p class="text-sm text-muted mt-1.5">Led Movicuenta (300K+ accounts · 🏆 Premio Platino), digital credit ($15B+ COP), referral platform ($20B+), and grew campaign analytics from 10% → 50% of production in 6 months. Team of 30+ across 3 divisions.</p>
+                <div class="text-xs text-muted font-medium mb-0.5">May 2020 – Nov 2022 · National Commercial Development & Digital Business Manager</div>
+                <p class="text-sm text-muted">Led Movicuenta (300K+ accounts · 🏆 Premio Platino), digital credit ($15B+ COP), referral platform ($20B+). Campaign analytics 10% → 50% in 6 months.</p>
               </div>
             </div>
-            <div class="flex flex-wrap gap-2 mt-5"><span class="tag">Digital Transformation</span><span class="tag">Commercial Banking</span><span class="tag">Digital Products</span><span class="tag">🏆 Premio Platino</span></div>
+            <div class="flex flex-wrap gap-2 mt-5"><span class="tag">Digital Transformation</span><span class="tag">Commercial Banking</span><span class="tag">Digital Products</span></div>
           </div>
         </div>
 
         <!-- Itaú -->
         <div class="reveal md:pl-20 relative">
-          <div class="absolute left-0 md:left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted hidden md:block ring-4 ring-surface"></div>
+          <div class="hidden md:block absolute left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted ring-4 ring-surface"></div>
           <div class="border-b border-border py-10">
             <div class="text-xs text-muted font-bold uppercase tracking-widest mb-1">Aug 2016 – May 2020 · 3 yrs 10 mos</div>
-            <h3 class="text-xl font-black text-text mb-0.5">Itaú Colombia</h3>
+            <h3 class="text-lg font-black mb-1">Itaú Colombia</h3>
             <div class="text-sm text-accentB font-semibold mb-5">3 progressive roles</div>
             <div class="space-y-4 pl-4 border-l border-border">
-              <div>
-                <div class="text-xs text-muted mb-0.5">May 2019 – May 2020 · National Hub Data & Digital Manager</div>
-                <p class="text-sm text-muted">+20% digital client penetration · >200% digital product sales budget · Full digital channel tooling implemented.</p>
-              </div>
-              <div>
-                <div class="text-xs text-muted mb-0.5">Aug 2017 – May 2019 · Commercial Development & CRM Manager</div>
-                <p class="text-sm text-muted">Lead Management strategy — grew analytics-driven production from &lt;10% → 70% in 2 years.</p>
-              </div>
-              <div>
-                <div class="text-xs text-muted mb-0.5">Aug 2016 – Aug 2017 · Commercial Intelligence & Development Lead</div>
-                <p class="text-sm text-muted">Commercial BI, intelligence tools, and executive reporting for the commercial division.</p>
-              </div>
+              <div><div class="text-xs text-muted mb-0.5">May 2019 – May 2020 · National Hub Data & Digital Manager</div><p class="text-sm text-muted">+20% digital client penetration · >200% digital product sales budget achieved.</p></div>
+              <div><div class="text-xs text-muted mb-0.5">Aug 2017 – May 2019 · Commercial Development & CRM Manager</div><p class="text-sm text-muted">Lead Management strategy — analytics production &lt;10% → 70% in 2 years.</p></div>
+              <div><div class="text-xs text-muted mb-0.5">Aug 2016 – Aug 2017 · Commercial Intelligence & Development Lead</div><p class="text-sm text-muted">Commercial BI, intelligence tools and executive reporting.</p></div>
             </div>
             <div class="flex flex-wrap gap-2 mt-4"><span class="tag">Advanced Analytics</span><span class="tag">Digital Marketing</span><span class="tag">CRM</span></div>
           </div>
@@ -635,28 +668,13 @@
 
         <!-- Earlier -->
         <div class="reveal md:pl-20 relative">
-          <div class="absolute left-0 md:left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted hidden md:block ring-4 ring-surface"></div>
+          <div class="hidden md:block absolute left-[18px] top-3 w-3 h-3 rounded-full bg-surface border-2 border-muted ring-4 ring-surface"></div>
           <div class="py-10">
-            <div class="text-xs text-muted font-bold uppercase tracking-widest mb-4">Earlier Roles</div>
+            <div class="text-xs text-muted font-bold uppercase tracking-widest mb-4">Earlier Roles · 2009–2016</div>
             <div class="grid md:grid-cols-3 gap-4">
-              <div class="noise border border-border rounded-xl p-4">
-                <div class="text-xs text-muted mb-1">Apr–Aug 2016</div>
-                <div class="text-sm font-bold text-text">Commercial Intelligence Director</div>
-                <div class="text-xs text-muted mt-0.5 mb-2">Credivalores</div>
-                <p class="text-xs text-muted">Built enterprise DWH, governance foundations and commercial data systems.</p>
-              </div>
-              <div class="noise border border-border rounded-xl p-4">
-                <div class="text-xs text-muted mb-1">Jan 2013–Apr 2016</div>
-                <div class="text-sm font-bold text-text">Customer Intelligence Lead</div>
-                <div class="text-xs text-muted mt-0.5 mb-2">Banco Agrario de Colombia</div>
-                <p class="text-xs text-muted">BI for Commercial VP; ML models for campaigns; Executive Information System development.</p>
-              </div>
-              <div class="noise border border-border rounded-xl p-4">
-                <div class="text-xs text-muted mb-1">Jan 2009–Mar 2016</div>
-                <div class="text-sm font-bold text-text">Founder & CEO</div>
-                <div class="text-xs text-muted mt-0.5 mb-2">MinerStat Analytics</div>
-                <p class="text-xs text-muted">Data analytics consultancy — Falabella, DNP, Grupo Lowe, Universidad Nacional.</p>
-              </div>
+              <div class="nc border border-border rounded-xl p-4"><div class="text-xs text-muted mb-1">Apr–Aug 2016</div><div class="text-sm font-bold">Commercial Intelligence Director</div><div class="text-xs text-muted mb-2">Credivalores</div><p class="text-xs text-muted">Built enterprise DWH and governance foundations.</p></div>
+              <div class="nc border border-border rounded-xl p-4"><div class="text-xs text-muted mb-1">Jan 2013–Apr 2016</div><div class="text-sm font-bold">Customer Intelligence Lead</div><div class="text-xs text-muted mb-2">Banco Agrario</div><p class="text-xs text-muted">ML models for campaigns; Executive Information System.</p></div>
+              <div class="nc border border-border rounded-xl p-4"><div class="text-xs text-muted mb-1">Jan 2009–Mar 2016</div><div class="text-sm font-bold">Founder & CEO</div><div class="text-xs text-muted mb-2">MinerStat Analytics</div><p class="text-xs text-muted">Consultancy serving Falabella, DNP, Grupo Lowe, Univ. Nacional.</p></div>
             </div>
           </div>
         </div>
@@ -664,139 +682,172 @@
       </div>
     </div>
 
-    <!-- Academic block -->
-    <div class="reveal mt-6 border border-border rounded-2xl p-6 bg-bg">
-      <div class="flex items-center gap-3 mb-5">
-        <div class="slabel">Academic Experience</div>
+    <!-- Academic -->
+    <div class="reveal mt-4 border border-border rounded-2xl p-6 bg-bg">
+      <div class="flex flex-wrap items-center gap-3 mb-5">
+        <div class="sl">Academic Experience</div>
         <span class="text-xs text-muted border border-border rounded-full px-3 py-0.5">Part-time · Ongoing</span>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div>
-          <div class="text-sm font-bold text-text">Universidad del Rosario</div>
-          <div class="text-xs text-muted mt-0.5">MSc Business Analytics · Statistical Models, ML, Multivariate Analysis</div>
-          <div class="text-xs text-accent mt-1">Dec 2021–Present · 6+ theses directed</div>
-        </div>
-        <div>
-          <div class="text-sm font-bold text-text">Universidad El Bosque</div>
-          <div class="text-xs text-muted mt-0.5">BSc Systems Engineering · Big Data (Hadoop, Spark), Data Visualization</div>
-          <div class="text-xs text-muted mt-1">Jan 2023–Dec 2024</div>
-        </div>
-        <div>
-          <div class="text-sm font-bold text-text">Universidad Santo Tomás</div>
-          <div class="text-xs text-muted mt-0.5">ML, Multivariate Statistics, Marketing Analytics, Brand Strategy</div>
-          <div class="text-xs text-muted mt-1">Jun 2013–May 2022 · 9 years</div>
-        </div>
-        <div>
-          <div class="text-sm font-bold text-text">Univ. Surcolombiana</div>
-          <div class="text-xs text-muted mt-0.5">Graduate Diploma · Design of Experiments & Data Mining</div>
-          <div class="text-xs text-muted mt-1">Sep 2013–Apr 2020</div>
-        </div>
-        <div>
-          <div class="text-sm font-bold text-text">Universidad Nacional de Colombia</div>
-          <div class="text-xs text-muted mt-0.5">Teaching Assistant · Quantitative Methods · Symposium Co-organizer</div>
-          <div class="text-xs text-muted mt-1">2012–2013</div>
-        </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+        <div><div class="font-bold">Universidad del Rosario</div><div class="text-xs text-muted mt-0.5">MSc Business Analytics · Statistical Models, ML</div><div class="text-xs text-accent mt-1">Dec 2021–Present · 6+ theses directed</div></div>
+        <div><div class="font-bold">Universidad El Bosque</div><div class="text-xs text-muted mt-0.5">Big Data (Hadoop, Spark), Data Visualization</div><div class="text-xs text-muted mt-1">Jan 2023–Dec 2024</div></div>
+        <div><div class="font-bold">Universidad Santo Tomás</div><div class="text-xs text-muted mt-0.5">ML, Multivariate Statistics, Marketing Analytics</div><div class="text-xs text-muted mt-1">Jun 2013–May 2022 · 9 years</div></div>
+        <div><div class="font-bold">Univ. Surcolombiana</div><div class="text-xs text-muted mt-0.5">Design of Experiments & Data Mining</div><div class="text-xs text-muted mt-1">Sep 2013–Apr 2020</div></div>
+        <div><div class="font-bold">Universidad Nacional de Colombia</div><div class="text-xs text-muted mt-0.5">Teaching Assistant · Quantitative Methods</div><div class="text-xs text-muted mt-1">2012–2013</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════ INSIGHTS ════ -->
-<section id="insights" class="py-32 border-t border-border">
+<!-- ════════ RESEARCH & DIGITAL FOOTPRINT ════════ -->
+<section id="research" class="py-24 md:py-32 border-t border-border">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="reveal flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-      <div>
-        <div class="slabel mb-4">Insights</div>
-        <h2 class="text-4xl md:text-5xl font-black tracking-tight">Ideas & Thinking</h2>
-      </div>
-      <p class="text-muted text-sm max-w-sm leading-relaxed">Perspectives on data governance, AI ethics, and the future of data-driven organizations.</p>
+    <div class="reveal mb-14">
+      <div class="sl mb-3">Research & Digital Footprint</div>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight">Publications, Talks<br>& Media</h2>
+      <p class="text-muted text-sm mt-3 max-w-lg">Academic publications, conference talks, industry media and thought leadership pieces across data, analytics and fintech.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="reveal insight-card border border-border rounded-2xl p-7 bg-surface transition-colors group">
-        <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
-          <span class="w-3 h-3 rounded-full bg-accent/60 block group-hover:bg-accent transition-colors"></span>
-        </div>
-        <div class="text-xs text-muted uppercase tracking-widest mb-3 font-semibold">Data Governance</div>
-        <h3 class="text-lg font-black text-text mb-3 leading-snug">Why Federated Governance Wins in Large Organizations</h3>
-        <p class="text-sm text-muted leading-relaxed">Centralized data governance creates bottlenecks. Federated models with clear domain ownership empower teams while maintaining enterprise standards — the balance every CDO is looking for.</p>
-        <div class="mt-6 text-xs text-accent font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-          Read more <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-        </div>
-      </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-      <div class="reveal insight-card border border-border rounded-2xl p-7 bg-surface transition-colors group">
-        <div class="w-8 h-8 rounded-lg bg-accentB/10 flex items-center justify-center mb-5">
-          <span class="w-3 h-3 rounded-full bg-accentB/60 block group-hover:bg-accentB transition-colors"></span>
+      <a href="https://www.academia.edu/44740909/Detecci%C3%B3n_de_Fraude_en_tarjetas_de_cr%C3%A9dito_mediante_t%C3%A9cnicas_de_IA" target="_blank" rel="noopener"
+         class="reveal pcard nc border border-border rounded-2xl p-6 group block">
+        <div class="flex items-start justify-between mb-4">
+          <span class="text-xs font-bold text-accentB uppercase tracking-widest">Publication</span>
+          <div class="arr"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="text-muted"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
         </div>
-        <div class="text-xs text-muted uppercase tracking-widest mb-3 font-semibold">Data Operating Models</div>
-        <h3 class="text-lg font-black text-text mb-3 leading-snug">From Data Team to Data Product Team: The Shift That Changes Everything</h3>
-        <p class="text-sm text-muted leading-relaxed">Analytics teams that treat their outputs as products — with clear ownership, SLAs, and user feedback loops — outperform traditional BI teams by an order of magnitude.</p>
-        <div class="mt-6 text-xs text-accentB font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-          Read more <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-        </div>
-      </div>
+        <h3 class="text-base font-black mb-2 leading-snug group-hover:text-accent transition-colors">Detección de Fraude en Tarjetas de Crédito mediante técnicas de IA</h3>
+        <p class="text-xs text-muted mb-4">Research applying machine learning techniques to credit card fraud detection — one of 5 peer-reviewed publications.</p>
+        <span class="tag">Machine Learning</span> <span class="tag">Fraud Detection</span> <span class="tag">AI</span>
+      </a>
 
-      <div class="reveal insight-card border border-border rounded-2xl p-7 bg-surface transition-colors group">
-        <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
-          <span class="w-3 h-3 rounded-full bg-accent/60 block group-hover:bg-accent transition-colors"></span>
+      <a href="https://es.scribd.com/document/503491646/Deteccion-de-Fraude-en-Tarjetas-de-Credito" target="_blank" rel="noopener"
+         class="reveal pcard nc border border-border rounded-2xl p-6 group block">
+        <div class="flex items-start justify-between mb-4">
+          <span class="text-xs font-bold text-accentB uppercase tracking-widest">Paper · Scribd</span>
+          <div class="arr"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="text-muted"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
         </div>
-        <div class="text-xs text-muted uppercase tracking-widest mb-3 font-semibold">AI Governance</div>
-        <h3 class="text-lg font-black text-text mb-3 leading-snug">Building an AI Council: Structure, Governance & Ethics at Scale</h3>
-        <p class="text-sm text-muted leading-relaxed">GenAI adoption without governance is just technical debt at machine speed. A well-structured AI Council provides the accountability layer organizations need to scale responsibly.</p>
-        <div class="mt-6 text-xs text-accent font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-          Read more <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        <h3 class="text-base font-black mb-2 leading-snug group-hover:text-accent transition-colors">Fraud Detection with AI — Published on Scribd</h3>
+        <p class="text-xs text-muted mb-4">Extended version of the fraud detection research, publicly available and cited in multiple academic contexts.</p>
+        <span class="tag">Statistics</span> <span class="tag">Data Mining</span> <span class="tag">Scribd</span>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=q0_we523CgA" target="_blank" rel="noopener"
+         class="reveal pcard nc border border-border rounded-2xl p-6 group block">
+        <div class="flex items-start justify-between mb-4">
+          <span class="text-xs font-bold text-accent uppercase tracking-widest">Conference · Video</span>
+          <div class="arr"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="text-muted"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
         </div>
-      </div>
+        <h3 class="text-base font-black mb-2 leading-snug group-hover:text-accent transition-colors">Innovation & Academia–Industry Connection</h3>
+        <p class="text-xs text-muted mb-4">Speaker at Itaú Innovation Hackathon — bridging academic research and real-world data applications in financial services.</p>
+        <span class="tag">Innovation</span> <span class="tag">Fintech</span> <span class="tag">Speaker</span>
+      </a>
+
+      <a href="https://urosario.edu.co/eventos/escuela-de-administracion/circuito-power-talks" target="_blank" rel="noopener"
+         class="reveal pcard nc border border-border rounded-2xl p-6 group block">
+        <div class="flex items-start justify-between mb-4">
+          <span class="text-xs font-bold text-accent uppercase tracking-widest">Academic Speaker</span>
+          <div class="arr"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="text-muted"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+        </div>
+        <h3 class="text-base font-black mb-2 leading-snug group-hover:text-accent transition-colors">Circuito Power Talks — Universidad del Rosario</h3>
+        <p class="text-xs text-muted mb-4">Invited speaker at one of Colombia's top business schools on analytics strategy and data-driven business management.</p>
+        <span class="tag">Analytics Strategy</span> <span class="tag">Business</span> <span class="tag">Speaker</span>
+      </a>
+
+      <a href="https://www.facebook.com/RadioUNAL/photos/5508135559225598/" target="_blank" rel="noopener"
+         class="reveal pcard nc border border-border rounded-2xl p-6 group block">
+        <div class="flex items-start justify-between mb-4">
+          <span class="text-xs font-bold text-accentB uppercase tracking-widest">Media · Radio UNAL</span>
+          <div class="arr"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="text-muted"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+        </div>
+        <h3 class="text-base font-black mb-2 leading-snug group-hover:text-accent transition-colors">Finanzas Sostenibles para el Sector Agropecuario</h3>
+        <p class="text-xs text-muted mb-4">Interviewed on Radio UNAL on sustainable finance and data-driven models for agricultural banking in Colombia.</p>
+        <span class="tag">Finance</span> <span class="tag">AgTech</span> <span class="tag">Media</span>
+      </a>
+
+      <a href="http://www.dtmvic.com/Documents_small.html" target="_blank" rel="noopener"
+         class="reveal pcard nc border border-border rounded-2xl p-6 group block">
+        <div class="flex items-start justify-between mb-4">
+          <span class="text-xs font-bold text-accentB uppercase tracking-widest">Research · NLP</span>
+          <div class="arr"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="text-muted"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg></div>
+        </div>
+        <h3 class="text-base font-black mb-2 leading-snug group-hover:text-accent transition-colors">Text Mining & NLP Research — DTM Vic</h3>
+        <p class="text-xs text-muted mb-4">Referenced in the DTM Vic academic platform for contributions to text analysis and statistical NLP research.</p>
+        <span class="tag">NLP</span> <span class="tag">Text Mining</span> <span class="tag">Statistics</span>
+      </a>
+
     </div>
 
-    <!-- Research & publications -->
-    <div class="reveal mt-10 border border-border rounded-2xl p-6 bg-surface">
-      <div class="slabel mb-5">Research & Publications</div>
-      <div class="grid md:grid-cols-2 gap-3">
-        <a href="https://www.academia.edu/44740909/Detecci%C3%B3n_de_Fraude_en_tarjetas_de_cr%C3%A9dito_mediante_t%C3%A9cnicas_de_IA" target="_blank" class="flex items-start gap-4 p-4 rounded-xl hover:bg-border/50 transition-colors group">
-          <div class="w-10 h-10 rounded-lg border border-border flex items-center justify-center shrink-0 text-xs font-bold text-muted group-hover:text-accent group-hover:border-accent/30 transition-colors">AI</div>
-          <div><div class="text-sm font-semibold text-text group-hover:text-accent transition-colors">Detección de Fraude en Tarjetas de Crédito mediante IA</div><div class="text-xs text-muted mt-1">Academia.edu · 5 publications total</div></div>
-        </a>
-        <a href="https://urosario.edu.co/eventos/escuela-de-administracion/circuito-power-talks" target="_blank" class="flex items-start gap-4 p-4 rounded-xl hover:bg-border/50 transition-colors group">
-          <div class="w-10 h-10 rounded-lg border border-border flex items-center justify-center shrink-0 text-sm group-hover:border-accentB/30 transition-colors">🎤</div>
-          <div><div class="text-sm font-semibold text-text group-hover:text-accentB transition-colors">Speaker — Circuito Power Talks</div><div class="text-xs text-muted mt-1">Universidad del Rosario · Analytics & Business</div></div>
-        </a>
-        <a href="https://www.linkedin.com/in/dlcruzc/" target="_blank" class="flex items-start gap-4 p-4 rounded-xl hover:bg-border/50 transition-colors group">
-          <div class="w-10 h-10 rounded-lg border border-border flex items-center justify-center shrink-0 text-xs font-bold text-muted group-hover:text-accent group-hover:border-accent/30 transition-colors">in</div>
-          <div><div class="text-sm font-semibold text-text group-hover:text-accent transition-colors">CDO LATAM — Associate Member</div><div class="text-xs text-muted mt-1">Network of CDOs & Data Leaders across Latin America</div></div>
-        </a>
-        <a href="https://www.youtube.com/watch?v=q0_we523CgA" target="_blank" class="flex items-start gap-4 p-4 rounded-xl hover:bg-border/50 transition-colors group">
-          <div class="w-10 h-10 rounded-lg border border-border flex items-center justify-center shrink-0 text-sm group-hover:border-accentB/30 transition-colors">▶</div>
-          <div><div class="text-sm font-semibold text-text group-hover:text-accentB transition-colors">Innovation & Academia–Industry Talk</div><div class="text-xs text-muted mt-1">Itaú Innovation Hackathon · Video conference</div></div>
-        </a>
+    <!-- Insights strip -->
+    <div class="reveal mt-10">
+      <div class="sl mb-5">Insights & Thinking</div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="icard nc border border-border rounded-2xl p-6 group">
+          <div class="text-xs text-muted uppercase tracking-widest mb-3 font-semibold">Data Governance</div>
+          <h3 class="text-base font-black mb-3 leading-snug">Why Federated Governance Wins in Large Organizations</h3>
+          <p class="text-sm text-muted leading-relaxed">Centralized governance creates bottlenecks. Federated models with clear domain ownership empower teams while maintaining enterprise standards.</p>
+        </div>
+        <div class="icard nc border border-border rounded-2xl p-6 group">
+          <div class="text-xs text-muted uppercase tracking-widest mb-3 font-semibold">Data Operating Models</div>
+          <h3 class="text-base font-black mb-3 leading-snug">From Data Team to Data Product Team</h3>
+          <p class="text-sm text-muted leading-relaxed">Analytics teams that treat their outputs as products — with clear ownership, SLAs and feedback loops — outperform traditional BI teams by an order of magnitude.</p>
+        </div>
+        <div class="icard nc border border-border rounded-2xl p-6 group">
+          <div class="text-xs text-muted uppercase tracking-widest mb-3 font-semibold">AI Governance</div>
+          <h3 class="text-base font-black mb-3 leading-snug">Building an AI Council: Structure & Ethics at Scale</h3>
+          <p class="text-sm text-muted leading-relaxed">GenAI adoption without governance is technical debt at machine speed. A well-structured AI Council provides the accountability layer organizations need.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════ CONTACT ════ -->
-<section id="contact" class="py-32 border-t border-border bg-surface">
+<!-- ════════ CONTACT ════════ -->
+<section id="contact" class="py-24 md:py-32 border-t border-border bg-surface">
   <div class="max-w-7xl mx-auto px-6">
     <div class="max-w-3xl mx-auto text-center">
       <div class="reveal">
-        <div class="slabel mb-6 text-center">Contact</div>
-        <h2 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-6">
-          Let's work<br/><span class="grad">together.</span>
+        <div class="sl mb-5">Contact</div>
+        <h2 class="font-black tracking-tight leading-none mb-5 text-[clamp(2.5rem,6vw,5rem)]">
+          Let's work<br><span class="grad">together.</span>
         </h2>
-        <p class="text-muted text-lg leading-relaxed mb-4 max-w-xl mx-auto">
-          Whether you're building a data governance program, driving analytics transformation, designing a data operating model, or scaling AI responsibly — let's talk.
+        <p class="text-muted text-base md:text-lg leading-relaxed mb-3 max-w-xl mx-auto">
+          Building a data governance program, driving analytics transformation, designing a data operating model, or scaling AI responsibly?
         </p>
-        <p class="text-sm text-muted mb-12 italic">+57 301 756 4078 · Bogotá, Colombia</p>
+        <p class="text-sm text-muted mb-10">+57 301 756 4078 · Bogotá, Colombia</p>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-          <a href="mailto:lecruk@gmail.com" class="btn-p px-8 py-4 rounded-full text-sm inline-flex items-center gap-2.5 w-full sm:w-auto justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12 flex-wrap">
+          <a href="mailto:lecruk@gmail.com" class="btn-p w-full sm:w-auto justify-center">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
             lecruk@gmail.com
           </a>
-          <a href="https://linkedin.com/in/dlcruzc" target="_blank" class="btn-o px-8 py-4 rounded-full text-sm inline-flex items-center gap-2.5 w-full sm:w-auto justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://linkedin.com/in/dlcruzc" target="_blank" class="btn-o w-full sm:w-auto justify-center">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
-          <a href="https://github.com/dlcruzc" target="_blank" class="btn-o px-8 py-4 rounded-full text-sm inline-flex items-center gap-2.5 w-full sm:w-auto justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.2
+          <a href="https://github.com/dlcruzc" target="_blank" class="btn-o w-full sm:w-auto justify-center">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <div class="flex items-center justify-center flex-wrap gap-x-5 gap-y-2 text-muted text-xs font-medium tracking-widest uppercase">
+          <a href="https://linkedin.com/in/dlcruzc" target="_blank" class="hover:text-accent transition-colors">LinkedIn</a>
+          <span>·</span>
+          <a href="https://github.com/dlcruzc" target="_blank" class="hover:text-accent transition-colors">GitHub</a>
+          <span>·</span>
+          <a href="https://x.com/dlcruzc" target="_blank" class="hover:text-accent transition-colors">X / Twitter</a>
+          <span>·</span>
+          <a href="https://www.academia.edu/44740909" target="_blank" class="hover:text-accent transition-colors">Academia.edu</a>
+          <span>·</span>
+          <a href="https://danielleonardocruz.com" class="hover:text-accent transition-colors">danielleonardocruz.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-border py-8">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
+    <span>© 2026 Daniel Leonardo Cruz Ca
