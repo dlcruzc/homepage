@@ -1007,7 +1007,7 @@
     </div>
 
     <!-- Grid -->
-    <div class="reveal" id="mentorship-grid"></div>
+    <div id="mentorship-grid"></div>
 
     <!-- Count + CTA -->
     <div class="reveal mt-8 flex items-center justify-between">
@@ -1239,7 +1239,7 @@ function buildMentorship(filter) {
     var badgeClass = t.cat === 'directed' ? 'directed' : t.cat === 'research' ? 'research' : 'own';
     var badgeLabel = t.cat === 'directed' ? 'Directed' : t.cat === 'research' ? 'Research Paper' : 'Own Work';
     var tagsHtml = t.topics.map(function(tp){ return '<span class="tag">' + tp + '</span>'; }).join('');
-    html += '<div class="tcard reveal">'
+    html += '<div class="tcard">'
       + '<div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;">'
       + '<span class="tcard-badge ' + badgeClass + '">' + badgeLabel + '</span>'
       + '<span class="tcard-year">' + t.year + '</span>'
@@ -1252,8 +1252,6 @@ function buildMentorship(filter) {
       + '</div>';
   }
   grid.innerHTML = html;
-  // Re-trigger reveal for new cards
-  if (typeof checkReveals === 'function') setTimeout(checkReveals, 50);
   if (count) count.textContent = 'Showing ' + filtered.length + ' work' + (filtered.length !== 1 ? 's' : '');
 }
 
