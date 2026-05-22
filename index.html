@@ -207,6 +207,42 @@
     h1, h2, h3 { overflow-wrap: break-word; word-break: break-word; hyphens: auto; }
     p, li { overflow-wrap: break-word; }
 
+
+    /* ── Mentorship / Thesis cards ──────────────────────────── */
+    .tcard {
+      background: #141414; border: 1px solid #1e1e1e;
+      border-radius: 1.2rem; padding: 1.5rem;
+      transition: transform .28s, border-color .28s, box-shadow .28s;
+      display: flex; flex-direction: column; gap: .75rem;
+    }
+    .tcard:hover { transform: translateY(-5px); border-color: rgba(200,245,66,.22); box-shadow: 0 20px 50px rgba(200,245,66,.06); }
+    .tcard-badge {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .62rem; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; padding: .25rem .7rem;
+      border-radius: 999px; white-space: nowrap;
+    }
+    .tcard-badge.directed  { background: rgba(200,245,66,.12); color: #c8f542; border: 1px solid rgba(200,245,66,.3); }
+    .tcard-badge.research  { background: rgba(139,92,246,.12); color: #a78bfa; border: 1px solid rgba(139,92,246,.3); }
+    .tcard-badge.own       { background: rgba(59,130,246,.12);  color: #60a5fa; border: 1px solid rgba(59,130,246,.3);  }
+    .tcard-year { font-size: .7rem; font-weight: 700; color: #6b6b6b; }
+    .tcard-title { font-size: .95rem; font-weight: 800; line-height: 1.35; color: #e8e8e8; }
+    .tcard-student { font-size: .78rem; font-weight: 600; color: #c8f542; }
+    .tcard-meta { font-size: .72rem; color: #6b6b6b; line-height: 1.5; }
+    .tcard-desc { font-size: .78rem; color: #9a9a9a; line-height: 1.6; flex: 1; }
+    .tcard-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: auto; }
+
+    .mfbtn {
+      padding: .35rem .95rem; border-radius: 999px; font-size: .7rem; font-weight: 700;
+      letter-spacing: .07em; text-transform: uppercase; border: 1px solid #1e1e1e;
+      color: #6b6b6b; background: transparent; cursor: pointer; transition: .2s; white-space: nowrap;
+    }
+    .mfbtn:hover { border-color: rgba(200,245,66,.3); color: #c8f542; }
+    .mfbtn.active { background: rgba(200,245,66,.12); border-color: rgba(200,245,66,.4); color: #c8f542; }
+    #mentorship-grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 768px)  { #mentorship-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { #mentorship-grid { grid-template-columns: repeat(3, 1fr); } }
+
     /* ── Gallery ─────────────────────────────────────── */
     .gfbtn {
       padding: .35rem .95rem; border-radius: 999px; font-size: .7rem; font-weight: 700;
@@ -275,6 +311,7 @@
       <li><a href="#projects"   class="hover:text-text transition-colors">Projects</a></li>
       <li><a href="#experience" class="hover:text-text transition-colors">Experience</a></li>
       <li><a href="#research"   class="hover:text-text transition-colors">Research</a></li>
+      <li><a href="#mentorship" class="hover:text-text transition-colors">Mentorship</a></li>
       <li><a href="#photos"     class="hover:text-text transition-colors">Photos</a></li>
       <li><a href="#contact"    class="btn-p !py-2 !px-5 !text-xs">Let's Talk</a></li>
     </ul>
@@ -289,6 +326,7 @@
     <a href="#projects"   class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Projects</a>
     <a href="#experience" class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Experience</a>
     <a href="#research"   class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Research</a>
+    <a href="#mentorship" class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Mentorship</a>
     <a href="#photos"     class="block text-sm text-muted hover:text-accent transition-colors" onclick="cmob()">Photos</a>
     <a href="#contact"    class="block btn-p !text-sm text-center" onclick="cmob()">Let's Talk</a>
   </div>
@@ -928,6 +966,57 @@
   </div>
 </section>
 
+<!-- ════════ MENTORSHIP ════════ -->
+<section id="mentorship" class="py-24 md:py-32 border-t border-border">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="reveal mb-10">
+      <div class="sl mb-4">Academic Leadership</div>
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-5">
+        <div>
+          <h2 class="font-black tracking-tight leading-none mb-2" style="font-size:clamp(2rem,5vw,3.8rem);">
+            Research I've <span class="grad">mentored.</span>
+          </h2>
+          <p class="text-muted text-sm max-w-lg">Directed theses, co-authored research, and academic contributions across statistics, machine learning, and business analytics.</p>
+        </div>
+        <!-- Stats -->
+        <div class="flex gap-6 shrink-0">
+          <div class="text-center">
+            <div class="text-2xl font-black text-accent">5+</div>
+            <div class="text-xs text-muted uppercase tracking-widest">Theses Directed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-black text-accent">3</div>
+            <div class="text-xs text-muted uppercase tracking-widest">Universities</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-black text-accent">10+</div>
+            <div class="text-xs text-muted uppercase tracking-widest">Years Teaching</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="reveal mb-8 flex flex-wrap gap-2">
+      <button class="mfbtn active" data-mfilter="all">All</button>
+      <button class="mfbtn" data-mfilter="directed">Directed Theses</button>
+      <button class="mfbtn" data-mfilter="research">Research Papers</button>
+      <button class="mfbtn" data-mfilter="own">Own Academic Work</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="reveal" id="mentorship-grid"></div>
+
+    <!-- Count + CTA -->
+    <div class="reveal mt-8 flex items-center justify-between">
+      <p class="text-xs text-muted" id="mentorship-count"></p>
+      <p class="text-xs text-muted italic">More work being added continuously.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ════════ PHOTOS ════════ -->
 <section id="photos" class="py-24 md:py-32 border-t border-border overflow-hidden">
   <div class="max-w-7xl mx-auto px-6">
@@ -1078,6 +1167,108 @@ document.getElementById('mbtn').addEventListener('click', function(){
   document.getElementById('mmenu').classList.toggle('hidden');
 });
 function cmob(){ document.getElementById('mmenu').classList.add('hidden'); }
+
+// Mentorship / Thesis Section
+var mentorshipData = [
+  { cat:'directed', year:2023,
+    title:'Predictive Model for Customer Churn Identification',
+    titleEs:'Modelo de análisis predictivo para la identificación de clientes con tendencia a la deserción',
+    student:'Víctor Santiago Patarroyo Velasco',
+    university:'Universidad del Rosario', program:'Maestría en Business Analytics',
+    topics:['Machine Learning','Customer Churn','Predictive Analytics','Business Analytics'],
+    desc:'Developed a machine learning model to identify customers at risk of churn, enabling proactive commercial strategy and retention interventions.'
+  },
+  { cat:'directed', year:2018,
+    title:'Credit Card Fraud Detection via Data Mining',
+    titleEs:'Detección de Fraude en Tarjetas de Crédito mediante Técnicas de Minería de Datos',
+    student:'Edwin González, Andrés Ortiz, Gil Romero',
+    university:'Universidad Santo Tomás', program:'Estadística',
+    topics:['Fraud Detection','Data Mining','Credit Cards','Banking','Machine Learning'],
+    desc:'Comparative study of data mining techniques for detecting credit card fraud in non-face-to-face banking transactions.'
+  },
+  { cat:'directed', year:2017,
+    title:'Stacked Models: Neural Networks vs. Classification Trees',
+    titleEs:'Comparación de modelos apilados bajo los esquemas de redes neuronales y árboles de clasificación',
+    student:'Jhon Alexander Rincón Olmos',
+    university:'Universidad Santo Tomás', program:'Estadística',
+    topics:['Neural Networks','Decision Trees','Ensemble Methods','Stacking','Machine Learning'],
+    desc:'Research comparing stacked ensemble model performance combining neural networks and classification trees using the stacking method proposed by Wolpert (1992).'
+  },
+  { cat:'directed', year:2015,
+    title:'Propensity Score Models & Text Mining for CRM',
+    titleEs:'Comparación de modelos predictivos para Propensity Score y su caracterización mediante análisis de datos textuales',
+    student:'Paula Jiménez Quintero',
+    university:'Universidad Santo Tomás', program:'Estadística',
+    topics:['Propensity Score','Text Mining','Predictive Models','NLP','CRM'],
+    desc:'Comparison of predictive models for commercial campaign propensity scoring, combined with textual data analysis to characterize customer responses.'
+  },
+  { cat:'directed', year:2014,
+    title:'Multivariate Analysis of the Colombian Manufacturing Industry',
+    titleEs:'Análisis multivariado de la industria manufacturera en Colombia por grupos industriales',
+    student:'Camilo Guataquira Hurtado',
+    university:'Universidad Santo Tomás', program:'Profesional en Estadística',
+    topics:['Multivariate Analysis','PCA','Cluster Analysis','Manufacturing','Colombia'],
+    desc:'Applied principal components analysis and cluster methods to characterize Colombian manufacturing industrial groups based on 2011 DANE data.'
+  },
+  { cat:'research', year:2019,
+    title:'Classical & Bayesian Volatility in a Colombian Financial Market',
+    titleEs:'Volatilidad clásica y bayesiana en un mercado financiero colombiano',
+    student:'Álvaro Cangrejo, Christian Cortes · Co-authored',
+    university:'Universidad Santo Tomás / Universidad Surcolombiana', program:'Workshop — Statistical Methods',
+    topics:['Bayesian Statistics','Financial Volatility','GARCH','Colombian Market','Asset Pricing'],
+    desc:'Proposed classical and Bayesian methodologies to estimate constant volatility of a Colombian financial asset (Bancolombia preferred shares), contrasting Inverse Gamma, Levy, and Jeffreys priors.'
+  },
+  { cat:'own', year:2022,
+    title:'Impact Evaluation of the Avanza Colombia Credit Program',
+    titleEs:'Evaluación de impacto del programa Avanza Colombia',
+    student:'Daniel Leonardo Cruz Castro · MBA Thesis',
+    university:'PECEGE / Universidade de São Paulo', program:'MBA en Gestión de Negocios',
+    topics:['Impact Evaluation','Propensity Score Matching','COVID-19','Banking','Public Policy'],
+    desc:'Evaluated the socioeconomic impact of Avanza Colombia, a Banco Agrario emergency credit line disbursing $697B COP to 44,000 businesses during COVID-19 using Propensity Score Matching and Difference-in-Differences.'
+  }
+];
+
+function buildMentorship(filter) {
+  var grid = document.getElementById('mentorship-grid');
+  var count = document.getElementById('mentorship-count');
+  if (!grid) return;
+  var filtered = filter === 'all' ? mentorshipData : mentorshipData.filter(function(t){ return t.cat === filter; });
+  var html = '';
+  for (var i = 0; i < filtered.length; i++) {
+    var t = filtered[i];
+    var badgeClass = t.cat === 'directed' ? 'directed' : t.cat === 'research' ? 'research' : 'own';
+    var badgeLabel = t.cat === 'directed' ? 'Directed' : t.cat === 'research' ? 'Research Paper' : 'Own Work';
+    var tagsHtml = t.topics.map(function(tp){ return '<span class="tag">' + tp + '</span>'; }).join('');
+    html += '<div class="tcard reveal">'
+      + '<div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;">'
+      + '<span class="tcard-badge ' + badgeClass + '">' + badgeLabel + '</span>'
+      + '<span class="tcard-year">' + t.year + '</span>'
+      + '</div>'
+      + '<div class="tcard-title">' + t.title + '</div>'
+      + '<div class="tcard-student">' + t.student + '</div>'
+      + '<div class="tcard-meta">' + t.university + ' &middot; ' + t.program + '</div>'
+      + '<p class="tcard-desc">' + t.desc + '</p>'
+      + '<div class="tcard-tags">' + tagsHtml + '</div>'
+      + '</div>';
+  }
+  grid.innerHTML = html;
+  // Re-trigger reveal for new cards
+  if (typeof checkReveals === 'function') setTimeout(checkReveals, 50);
+  if (count) count.textContent = 'Showing ' + filtered.length + ' work' + (filtered.length !== 1 ? 's' : '');
+}
+
+var mfbtns = document.querySelectorAll('.mfbtn');
+for (var mi = 0; mi < mfbtns.length; mi++) {
+  (function(btn){
+    btn.addEventListener('click', function(){
+      for (var k = 0; k < mfbtns.length; k++) mfbtns[k].classList.remove('active');
+      btn.classList.add('active');
+      buildMentorship(btn.getAttribute('data-mfilter'));
+    });
+  })(mfbtns[mi]);
+}
+
+buildMentorship('all');
 
 // Photo Gallery
 var galleryData = [
